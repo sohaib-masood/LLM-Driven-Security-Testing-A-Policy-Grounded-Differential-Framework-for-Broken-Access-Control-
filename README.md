@@ -2,11 +2,6 @@
 
 Replication package for the paper submitted to the *International Journal of Advanced Computer Science and Applications (IJACSA)*.
 
-**Authors:** Sohaib Masood¹*, Rizwan Bin Faiz¹˒², Aamer Nadeem²
-¹ Faculty of Computing, Riphah International University, Islamabad, Pakistan
-² Software Engineering, Capital University of Science and Technology, Islamabad, Pakistan
-*Corresponding author: sohaib.masood@au.edu.pk
-
 ---
 
 ## Overview
