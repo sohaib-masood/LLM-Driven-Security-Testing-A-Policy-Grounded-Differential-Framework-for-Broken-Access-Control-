@@ -1,0 +1,70 @@
+policy_ref,role,operation,resource,ownership,endpoint,decision
+P004,patient,backup and restore,database,none,admin/backup_restore,deny
+P011,patient,view,dashboard,none,admin/dashboard,deny
+P018,patient,manage accountants,accountant account,none,admin/manage_accountant,deny
+P025,patient,manage,department,none,admin/manage_department,deny
+P032,patient,manage doctors,doctor account,none,admin/manage_doctor,deny
+P039,patient,manage,email template,none,admin/manage_email_template,deny
+P046,patient,manage laboratorists,laboratorist account,none,admin/manage_laboratorist,deny
+P053,patient,manage,language,none,admin/manage_language,deny
+P060,patient,manage,noticeboard,none,admin/manage_noticeboard,deny
+P067,patient,manage nurses,nurse account,none,admin/manage_nurse,deny
+P074,patient,manage patients,patient account,none,admin/manage_patient,deny
+P081,patient,manage pharmacists,pharmacist account,none,admin/manage_pharmacist,deny
+P089,patient,manage,profile,other,admin/manage_profile,deny
+P096,patient,manage,system settings,none,admin/system_settings,deny
+P103,patient,view,appointment,none,admin/view_appointment,deny
+P110,patient,view,bed status,none,admin/view_bed_status,deny
+P117,patient,view,blood bank,none,admin/view_blood_bank,deny
+P124,patient,view,medicine,none,admin/view_medicine,deny
+P131,patient,view,payment,none,admin/view_payment,deny
+P138,patient,view,report,none,admin/view_report,deny
+P145,patient,view,dashboard,none,doctor/dashboard,deny
+P153,patient,view,appointment,other,doctor/manage_appointment,deny
+P161,patient,edit,appointment,other,doctor/manage_appointment,deny
+P169,patient,delete,appointment,other,doctor/manage_appointment,deny
+P176,patient,manage,bed allotment,none,doctor/manage_bed_allotment,deny
+P183,patient,manage,patient record,none,doctor/manage_patient,deny
+P191,patient,manage,prescription,other,doctor/manage_prescription,deny
+P199,patient,manage,profile,other,doctor/manage_profile,deny
+P207,patient,manage,report,other,doctor/manage_report,deny
+P214,patient,view,blood bank,none,doctor/view_blood_bank,deny
+P221,patient,view,dashboard,none,nurse/dashboard,deny
+P228,patient,manage,bed,none,nurse/manage_bed,deny
+P235,patient,manage,bed allotment,none,nurse/manage_bed_allotment,deny
+P242,patient,manage,blood bank,none,nurse/manage_blood_bank,deny
+P249,patient,manage,blood donor,none,nurse/manage_blood_donor,deny
+P256,patient,manage,patient record,none,nurse/manage_patient,deny
+P264,patient,manage,profile,other,nurse/manage_profile,deny
+P271,patient,manage,report,none,nurse/manage_report,deny
+P278,patient,view,dashboard,none,patient/dashboard,allow
+P285,patient,manage,profile,own,patient/manage_profile,allow
+P286,patient,manage,profile,other,patient/manage_profile,deny
+P293,patient,view,payment history,own,patient/payment_history,allow
+P294,patient,view,payment history,other,patient/payment_history,deny
+P301,patient,view,admit history,own,patient/view_admit_history,allow
+P302,patient,view,admit history,other,patient/view_admit_history,deny
+P309,patient,view,appointment,own,patient/view_appointment,allow
+P310,patient,view,appointment,other,patient/view_appointment,deny
+P317,patient,view,blood bank,none,patient/view_blood_bank,allow
+P324,patient,view,doctor,none,patient/view_doctor,allow
+P331,patient,view,invoice,own,patient/view_invoice,allow
+P332,patient,view,invoice,other,patient/view_invoice,deny
+P339,patient,view,operation history,own,patient/view_operation_history,allow
+P340,patient,view,operation history,other,patient/view_operation_history,deny
+P347,patient,view,prescription,own,patient/view_prescription,allow
+P348,patient,view,prescription,other,patient/view_prescription,deny
+P355,patient,view,dashboard,none,pharmacist/dashboard,deny
+P362,patient,manage,medicine,none,pharmacist/manage_medicine,deny
+P369,patient,manage,medicine category,none,pharmacist/manage_medicine_category,deny
+P376,patient,manage,prescription,none,pharmacist/manage_prescription,deny
+P383,patient,manage,profile,other,pharmacist/manage_profile,deny
+P391,patient,view,dashboard,none,laboratorist/dashboard,deny
+P398,patient,manage,blood bank,none,laboratorist/manage_blood_bank,deny
+P405,patient,manage,blood donor,none,laboratorist/manage_blood_donor,deny
+P412,patient,manage,prescription,none,laboratorist/manage_prescription,deny
+P419,patient,manage,profile,other,laboratorist/manage_profile,deny
+P427,patient,view,dashboard,none,accountant/dashboard,deny
+P434,patient,manage,invoice,none,accountant/manage_invoice,deny
+P441,patient,manage,profile,other,accountant/manage_profile,deny
+P449,patient,view,payment,none,accountant/view_payment,deny

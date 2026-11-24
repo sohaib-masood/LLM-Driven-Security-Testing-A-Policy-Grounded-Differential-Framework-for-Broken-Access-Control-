@@ -1,0 +1,5 @@
+instance,attacker,victim_record,endpoint,attack,evidence
+1 appointment,doctor 4 (Yasir),appointment 16 (doctor 6; also 14),index.php?doctor/manage_appointment/{edit|delete}/16,BTF and SATF 1: replace id or action,transport + state (row in table appointment) + differential
+2 prescription,patient 3 (Bilal),prescription 5 (patient 8),index.php?patient/view_prescription/edit/5,BTF: replace own id 3 by 5,transport + content (MARK_RX05_X) + differential
+3 doctor account,patient 3 or doctor 4,admin/manage_doctor,index.php?admin/manage_doctor,SATF 2 (role segment) and SATF 3 (no session),transport + state (table doctor) + differential
+4 invoice,doctor 4 or no session,invoices of patient 3 and 8,index.php?patient/view_invoice,SATF 2 and SATF 3,transport + content (MARK_INV03_X or MARK_INV08_X) + differential

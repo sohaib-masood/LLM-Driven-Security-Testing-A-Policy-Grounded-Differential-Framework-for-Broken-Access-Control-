@@ -1,0 +1,64 @@
+policy_ref,role,operation,resource,ownership,endpoint,decision
+P001,admin,backup and restore,database,none,admin/backup_restore,allow
+P008,admin,view,dashboard,none,admin/dashboard,allow
+P015,admin,manage accountants,accountant account,none,admin/manage_accountant,allow
+P022,admin,manage,department,none,admin/manage_department,allow
+P029,admin,manage doctors,doctor account,none,admin/manage_doctor,allow
+P036,admin,manage,email template,none,admin/manage_email_template,allow
+P043,admin,manage laboratorists,laboratorist account,none,admin/manage_laboratorist,allow
+P050,admin,manage,language,none,admin/manage_language,allow
+P057,admin,manage,noticeboard,none,admin/manage_noticeboard,allow
+P064,admin,manage nurses,nurse account,none,admin/manage_nurse,allow
+P071,admin,manage patients,patient account,none,admin/manage_patient,allow
+P078,admin,manage pharmacists,pharmacist account,none,admin/manage_pharmacist,allow
+P085,admin,manage,profile,own,admin/manage_profile,allow
+P086,admin,manage,profile,other,admin/manage_profile,deny
+P093,admin,manage,system settings,none,admin/system_settings,allow
+P100,admin,view,appointment,none,admin/view_appointment,allow
+P107,admin,view,bed status,none,admin/view_bed_status,allow
+P114,admin,view,blood bank,none,admin/view_blood_bank,allow
+P121,admin,view,medicine,none,admin/view_medicine,allow
+P128,admin,view,payment,none,admin/view_payment,allow
+P135,admin,view,report,none,admin/view_report,allow
+P142,admin,view,dashboard,none,doctor/dashboard,deny
+P149,admin,view,appointment,other,doctor/manage_appointment,deny
+P157,admin,edit,appointment,other,doctor/manage_appointment,deny
+P165,admin,delete,appointment,other,doctor/manage_appointment,deny
+P173,admin,manage,bed allotment,none,doctor/manage_bed_allotment,deny
+P180,admin,manage,patient record,none,doctor/manage_patient,deny
+P187,admin,manage,prescription,other,doctor/manage_prescription,deny
+P195,admin,manage,profile,other,doctor/manage_profile,deny
+P203,admin,manage,report,other,doctor/manage_report,deny
+P211,admin,view,blood bank,none,doctor/view_blood_bank,deny
+P218,admin,view,dashboard,none,nurse/dashboard,deny
+P225,admin,manage,bed,none,nurse/manage_bed,deny
+P232,admin,manage,bed allotment,none,nurse/manage_bed_allotment,deny
+P239,admin,manage,blood bank,none,nurse/manage_blood_bank,deny
+P246,admin,manage,blood donor,none,nurse/manage_blood_donor,deny
+P253,admin,manage,patient record,none,nurse/manage_patient,deny
+P260,admin,manage,profile,other,nurse/manage_profile,deny
+P268,admin,manage,report,none,nurse/manage_report,deny
+P275,admin,view,dashboard,none,patient/dashboard,deny
+P282,admin,manage,profile,other,patient/manage_profile,deny
+P290,admin,view,payment history,other,patient/payment_history,deny
+P298,admin,view,admit history,other,patient/view_admit_history,deny
+P306,admin,view,appointment,other,patient/view_appointment,deny
+P314,admin,view,blood bank,none,patient/view_blood_bank,deny
+P321,admin,view,doctor,none,patient/view_doctor,deny
+P328,admin,view,invoice,other,patient/view_invoice,deny
+P336,admin,view,operation history,other,patient/view_operation_history,deny
+P344,admin,view,prescription,other,patient/view_prescription,deny
+P352,admin,view,dashboard,none,pharmacist/dashboard,deny
+P359,admin,manage,medicine,none,pharmacist/manage_medicine,deny
+P366,admin,manage,medicine category,none,pharmacist/manage_medicine_category,deny
+P373,admin,manage,prescription,none,pharmacist/manage_prescription,deny
+P380,admin,manage,profile,other,pharmacist/manage_profile,deny
+P388,admin,view,dashboard,none,laboratorist/dashboard,deny
+P395,admin,manage,blood bank,none,laboratorist/manage_blood_bank,deny
+P402,admin,manage,blood donor,none,laboratorist/manage_blood_donor,deny
+P409,admin,manage,prescription,none,laboratorist/manage_prescription,deny
+P416,admin,manage,profile,other,laboratorist/manage_profile,deny
+P424,admin,view,dashboard,none,accountant/dashboard,deny
+P431,admin,manage,invoice,none,accountant/manage_invoice,deny
+P438,admin,manage,profile,other,accountant/manage_profile,deny
+P446,admin,view,payment,none,accountant/view_payment,deny

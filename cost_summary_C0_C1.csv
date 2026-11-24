@@ -1,0 +1,9 @@
+condition,instance,prompt_tokens,completion_tokens,total_tokens,total_time_seconds
+C0,appointment,876,1098,1974,2.34
+C0,prescription,835,1127,1962,2.55
+C0,doctor_account,835,1058,1893,2.30
+C0,invoice,831,1473,2304,3.14
+C1,appointment,891,1400,2291,3.00
+C1,prescription,870,861,1731,1.84
+C1,doctor_account,867,977,1844,2.15
+C1,invoice,865,1564,2429,3.32

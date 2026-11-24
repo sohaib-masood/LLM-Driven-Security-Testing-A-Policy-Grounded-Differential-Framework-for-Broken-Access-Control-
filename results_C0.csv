@@ -1,0 +1,137 @@
+variant,instance,attempt,verdict,note
+V1,appointment,edit_id47,PASS,access denied (marker not found)
+V1,appointment,delete_id47,PASS,access denied (marker not found)
+V1,prescription,baseline_own,PASS,baseline request succeeded without victim data
+V1,prescription,attack_other,PASS,attack denied - victim marker absent
+V1,doctor_account,logged_in_patient,PASS,marker not found - access denied
+V1,doctor_account,unauthenticated,PASS,marker not found - access denied
+V1,invoice,logged_in_doctor,PASS,access denied (marker not found)
+V1,invoice,no_session,PASS,access denied (marker not found)
+M01,appointment,edit_id47,PASS,access denied (marker not found)
+M01,appointment,delete_id47,PASS,access denied (marker not found)
+M01,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M01,prescription,attack_other,PASS,attack denied - victim marker absent
+M01,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M01,doctor_account,unauthenticated,PASS,marker not found - access denied
+M01,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M01,invoice,no_session,PASS,access denied (marker not found)
+M02,appointment,edit_id47,PASS,access denied (marker not found)
+M02,appointment,delete_id47,PASS,access denied (marker not found)
+M02,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M02,prescription,attack_other,PASS,attack denied - victim marker absent
+M02,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M02,doctor_account,unauthenticated,PASS,marker not found - access denied
+M02,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M02,invoice,no_session,PASS,access denied (marker not found)
+M03,appointment,edit_id47,PASS,access denied (marker not found)
+M03,appointment,delete_id47,PASS,access denied (marker not found)
+M03,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M03,prescription,attack_other,PASS,attack denied - victim marker absent
+M03,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M03,doctor_account,unauthenticated,ERROR,unhandled 500 Internal Server Error (resp.raise_for_status with no try/except) - no verdict produced
+M03,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M03,invoice,no_session,PASS,access denied (marker not found)
+M04,appointment,edit_id47,PASS,access denied (marker not found)
+M04,appointment,delete_id47,PASS,access denied (marker not found)
+M04,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M04,prescription,attack_other,PASS,attack denied - victim marker absent
+M04,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M04,doctor_account,unauthenticated,PASS,marker not found - access denied
+M04,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M04,invoice,no_session,PASS,access denied (marker not found)
+M05,appointment,edit_id47,PASS,access denied (marker not found)
+M05,appointment,delete_id47,PASS,access denied (marker not found)
+M05,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M05,prescription,attack_other,PASS,attack denied - victim marker absent
+M05,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M05,doctor_account,unauthenticated,PASS,marker not found - access denied
+M05,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M05,invoice,no_session,PASS,access denied (marker not found)
+M06,appointment,edit_id47,PASS,access denied (marker not found)
+M06,appointment,delete_id47,PASS,access denied (marker not found)
+M06,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M06,prescription,attack_other,PASS,attack denied - victim marker absent
+M06,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M06,doctor_account,unauthenticated,PASS,marker not found - access denied
+M06,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M06,invoice,no_session,PASS,access denied (marker not found)
+M07,appointment,edit_id47,PASS,access denied (marker not found)
+M07,appointment,delete_id47,PASS,access denied (marker not found) - mutant survives: delete goes through silently but response content gives no evidence
+M07,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M07,prescription,attack_other,PASS,attack denied - victim marker absent
+M07,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M07,doctor_account,unauthenticated,PASS,marker not found - access denied
+M07,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M07,invoice,no_session,PASS,access denied (marker not found)
+M08,appointment,edit_id47,PASS,access denied (marker not found)
+M08,appointment,delete_id47,PASS,access denied (marker not found)
+M08,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M08,prescription,attack_other,FAIL,attack allowed - victim marker found (MUTANT KILLED)
+M08,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M08,doctor_account,unauthenticated,PASS,marker not found - access denied
+M08,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M08,invoice,no_session,PASS,access denied (marker not found)
+M09,appointment,edit_id47,PASS,access denied (marker not found)
+M09,appointment,delete_id47,PASS,access denied (marker not found)
+M09,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M09,prescription,attack_other,PASS,attack denied - victim marker absent
+M09,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M09,doctor_account,unauthenticated,PASS,marker not found - access denied
+M09,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M09,invoice,no_session,PASS,access denied (marker not found)
+M10,appointment,edit_id47,PASS,access denied (marker not found)
+M10,appointment,delete_id47,PASS,access denied (marker not found)
+M10,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M10,prescription,attack_other,PASS,attack denied - victim marker absent
+M10,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M10,doctor_account,unauthenticated,PASS,marker not found - access denied
+M10,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M10,invoice,no_session,PASS,access denied (marker not found)
+M11,appointment,edit_id47,PASS,access denied (marker not found)
+M11,appointment,delete_id47,PASS,access denied (marker not found)
+M11,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M11,prescription,attack_other,PASS,attack denied - victim marker absent
+M11,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M11,doctor_account,unauthenticated,PASS,marker not found - access denied
+M11,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M11,invoice,no_session,PASS,access denied (marker not found)
+M12,appointment,edit_id47,PASS,access denied (marker not found)
+M12,appointment,delete_id47,PASS,access denied (marker not found) - mutant survives: delete goes through silently but response content gives no evidence
+M12,prescription,baseline_own,PASS,baseline request succeeded without victim data
+M12,prescription,attack_other,PASS,attack denied - victim marker absent
+M12,doctor_account,logged_in_patient,PASS,marker not found - access denied
+M12,doctor_account,unauthenticated,PASS,marker not found - access denied
+M12,invoice,logged_in_doctor,PASS,access denied (marker not found)
+M12,invoice,no_session,PASS,access denied (marker not found)
+V1,nurse_bed,admin_access,PASS,"admin access to nurse/manage_bed correctly denied"
+M13,nurse_bed,admin_access,FAIL,"admin access to nurse/manage_bed ALLOW, expected DENY - request was not denied by transport"
+V1,admin_patient,access,PASS,"access correctly denied"
+M14,admin_patient,access,FAIL,"allowed when it should be denied"
+V1,pharmacist_medicine,access,PASS,"access allowed as expected"
+M16,pharmacist_medicine,access,FAIL,"access was denied (transport redirect) but expected ALLOW"
+V1,accountant_invoice,access,PASS,"access correctly denied"
+M17,accountant_invoice,access,FAIL,"allowed when denial expected"
+V1,appointment_list,access,PASS,"access correctly denied"
+M19,appointment_list,access,FAIL,"victim data was exposed (marker found)"
+V1,patient_appointment,get,PASS,"GET access denied as expected"
+V1,patient_appointment,post_token,FAIL,"could not find authenticity_token on view_appointment page"
+M20,patient_appointment,get,FAIL,"victim marker was present"
+M20,patient_appointment,post_token,FAIL,"could not find authenticity_token on view_appointment page"
+M26,patient_appointment,get,PASS,"access denied as expected"
+M26,patient_appointment,post_token,FAIL,"could not find authenticity_token on view_appointment page"
+V1,payment_history,get,PASS,"access denied as expected"
+V1,payment_history,post,PASS,"access denied as expected"
+M21,payment_history,get,FAIL,"marker found, access was allowed"
+M21,payment_history,post,PASS,"access denied as expected"
+M27,payment_history,get,PASS,"access denied as expected"
+M27,payment_history,post,PASS,"access denied as expected (mutant not detected by this script)"
+V1,admit_history,access,FAIL,"allow (victim data leaked) - occurs on baseline V1 too, same as mutant"
+M22,admit_history,access,FAIL,"allow (victim data leaked)"
+V1,operation_history,access,PASS,"access denied as expected"
+M23,operation_history,access,PASS,"access denied as expected (mutant not detected by this script)"
+V1,invoice_list,access,PASS,"access correctly denied"
+M24,invoice_list,access,FAIL,"access was allowed (marker found)"
+V1,appointment_doctor_isr,access,PASS,"access denied as expected"
+M28,appointment_doctor_isr,access,PASS,"access denied as expected (mutant not detected by this script)"
+V1,manage_profile_isr,update,FAIL,"script GETs update_profile_info directly to fetch CSRF token; that GET itself triggers the write, page redirects, no token found - script cannot proceed"
+M29,manage_profile_isr,update,FAIL,"same script defect - cannot complete regardless of variant"

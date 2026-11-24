@@ -1,0 +1,97 @@
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Sohaib>D:
+
+D:\>cd hms_experiment
+
+D:\hms_experiment>set GROQ_API_KEY=[REDACTED - revoked]
+
+D:\hms_experiment>python run_c0.py
+python: can't open file 'D:\\hms_experiment\\run_c0.py': [Errno 2] No such file or directory
+
+D:\hms_experiment>set GROQ_API_KEY=[REDACTED - revoked, replaced after rotation]
+
+D:\hms_experiment>python run_c0.py
+=== C0: appointment ===
+Saved c0_appointment.py  (tokens used: {'prompt_tokens': 407, 'completion_tokens': 1260, 'total_tokens': 1667})
+=== C0: prescription ===
+Saved c0_prescription.py  (tokens used: {'prompt_tokens': 366, 'completion_tokens': 1299, 'total_tokens': 1665})
+=== C0: doctor_account ===
+Saved c0_doctor_account.py  (tokens used: {'prompt_tokens': 366, 'completion_tokens': 1055, 'total_tokens': 1421})
+=== C0: invoice ===
+Saved c0_invoice.py  (tokens used: {'prompt_tokens': 362, 'completion_tokens': 910, 'total_tokens': 1272})
+
+[NOTE: the four runs above were early debugging iterations of the C0 prompt template
+(login mechanism fix, CodeIgniter redirect-quirk fix, marker-based detection fix).
+Three more full regenerations followed as the prompt was corrected. The FINAL,
+reported run used for Table 9's cost figures (2033 avg tokens/test) is the one
+immediately below, captured against V1 before the mutant sweep began.]
+
+D:\hms_experiment>python run_c0.py
+=== C0: appointment ===
+Saved c0_appointment.py  (tokens used: {'prompt_tokens': 876, 'completion_tokens': 1098, 'total_tokens': 1974})
+=== C0: prescription ===
+Saved c0_prescription.py  (tokens used: {'prompt_tokens': 835, 'completion_tokens': 1127, 'total_tokens': 1962})
+=== C0: doctor_account ===
+Saved c0_doctor_account.py  (tokens used: {'prompt_tokens': 835, 'completion_tokens': 1058, 'total_tokens': 1893})
+=== C0: invoice ===
+Saved c0_invoice.py  (tokens used: {'prompt_tokens': 831, 'completion_tokens': 1473, 'total_tokens': 2304})
+
+D:\hms_experiment>python switch_variant.py D:\wamp64\www\hms D:\hms_experiment\variants V1
+live HMS is now V1
+
+D:\hms_experiment>python c0_appointment.py
+Edit appointment ID 47: PASS - access denied (marker not found)
+Delete appointment ID 47: PASS - access denied (marker not found)
+
+D:\hms_experiment>python c0_prescription.py
+PASS Baseline request succeeded without victim data
+PASS Attack denied - victim marker absent
+
+D:\hms_experiment>python c0_doctor_account.py
+PASS Logged-in patient attempt: Marker not found - access denied
+PASS Unauthenticated attempt: Marker not found - access denied
+
+D:\hms_experiment>python c0_invoice.py
+Attempt 1 (logged-in doctor): PASS - access denied (marker not found)
+Attempt 2 (no session): PASS - access denied (marker not found)
+
+[Mutant sweep M01-M12 follows; full per-mutant verdicts are tabulated in results_C0.csv.
+Only M03 (unhandled 500 error on the doctor_account anonymous attempt) and M08
+(prescription attack FAIL - mutant killed) deviate from the all-PASS pattern.]
+
+D:\hms_experiment>python switch_variant.py D:\wamp64\www\hms D:\hms_experiment\variants V1
+live HMS is now V1
+
+D:\hms_experiment>python run_c1.py
+=== C1: appointment ===
+Saved c1_appointment.py  (tokens used: {'prompt_tokens': 891, 'completion_tokens': 1400, 'total_tokens': 2291})
+=== C1: prescription ===
+Saved c1_prescription.py  (tokens used: {'prompt_tokens': 870, 'completion_tokens': 861, 'total_tokens': 1731})
+=== C1: doctor_account ===
+Saved c1_doctor_account.py  (tokens used: {'prompt_tokens': 867, 'completion_tokens': 977, 'total_tokens': 1844})
+=== C1: invoice ===
+Saved c1_invoice.py  (tokens used: {'prompt_tokens': 865, 'completion_tokens': 1564, 'total_tokens': 2429})
+
+D:\hms_experiment>python c1_appointment.py
+PASS: login successful
+PASS: doctor view appointment own
+PASS: doctor view appointment other
+PASS: doctor delete appointment other
+
+D:\hms_experiment>python c1_prescription.py
+own: PASS
+other: PASS
+
+D:\hms_experiment>python c1_doctor_account.py
+PASS: patient manage doctors - expected denied, observed denied
+
+D:\hms_experiment>python c1_invoice.py
+Login successful
+PASS: own invoice - returned 200 without error
+PASS: other invoice - marker not found, access correctly denied
+
+[Mutant sweep M01-M12 follows; full per-mutant verdicts are tabulated in results_C1.csv.
+Only M08 (prescription other: FAIL, marker found - mutant killed) deviates from the
+all-PASS pattern.]

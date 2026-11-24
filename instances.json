@@ -1,0 +1,6 @@
+[
+ {"id":1,"resource":"appointment","endpoint":"doctor/manage_appointment/{edit|delete}/{appointment_id}","owner_field":"appointment.doctor_id","steps":["BTF","SATF1"]},
+ {"id":2,"resource":"prescription","endpoint":"patient/view_prescription/edit/{prescription_id}","owner_field":"prescription.patient_id","steps":["BTF"]},
+ {"id":3,"resource":"doctor account","endpoint":"admin/manage_doctor","owner_field":null,"steps":["SATF2","SATF3"]},
+ {"id":4,"resource":"invoice","endpoint":"patient/view_invoice","owner_field":"invoice.patient_id","steps":["SATF2","SATF3"]}
+]

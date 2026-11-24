@@ -1,0 +1,8 @@
+baseline_denied,denied_by_transport,expected_decision,instance,login_ok,observed_decision,policy_ref,role,state_after,state_before,step,verdict
+False,False,deny,appointment,True,allow,P151,doctor,,,BTF 6,FAIL (violation found)
+False,True,deny,appointment,True,deny,P167,doctor,"(1,)","(1,)",SATF 1.2,PASS
+False,False,deny,prescription,True,deny,P348,patient,,,BTF 6,PASS
+,True,deny,doctor account,True,deny,P032,patient,,,SATF 2.2,PASS
+,True,deny,doctor account,,deny,P032,patient,,,SATF 3.2,PASS
+,True,deny,invoice,True,deny,P329,doctor,,,SATF 2.2,PASS
+,True,deny,invoice,,deny,P329,doctor,,,SATF 3.2,PASS

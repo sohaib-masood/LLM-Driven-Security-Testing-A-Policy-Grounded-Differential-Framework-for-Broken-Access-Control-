@@ -1,0 +1,22 @@
+baseline_denied,denied_by_transport,expected_decision,instance,login_ok,notes,observed_decision,policy_ref,role,state_after,state_before,step,verdict
+False,False,deny,appointment,True,,allow,P151,doctor,,,BTF 6,FAIL (violation found)
+True,,deny,appointment,True,"baseline (own record) was denied, or was already consumed by an earlier run -- restore the seeded database and try again",inconclusive,P167,doctor,,,SATF 1.2,
+False,False,deny,prescription,True,,deny,P348,patient,,,BTF 6,PASS
+,True,deny,doctor account,True,,deny,P032,patient,,,SATF 2.2,PASS
+,True,deny,doctor account,,,deny,P032,patient,,,SATF 3.2,PASS
+,True,deny,invoice,True,,deny,P329,doctor,,,SATF 2.2,PASS
+,True,deny,invoice,,,deny,P329,doctor,,,SATF 3.2,PASS
+False,False,deny,appointment,True,,allow,P159,doctor,,,M28,FAIL (violation found)
+,True,deny,nurse_bed,True,,deny,P225,admin,,,M13,PASS
+,True,deny,admin_patient,,,deny,P074,patient,,,M14,PASS
+,False,allow,pharmacist_medicine,True,,deny,P363,pharmacist,,,M16,PASS
+,True,deny,accountant_invoice,,,deny,P434,patient,,,M17,PASS
+,False,deny,appointment_list,True,,deny,P151,doctor,,,M19,PASS
+,False,deny,patient_appointment,True,,deny,P310,patient,,,M20,PASS
+,False,deny,patient_appointment,True,,deny,P310,patient,,,M26,PASS
+,False,deny,payment_history,True,,deny,P294,patient,,,M21,PASS
+,False,deny,payment_history,True,,deny,P294,patient,,,M27,PASS
+,False,deny,admit_history,True,,deny,P302,patient,,,M22,PASS
+,False,deny,operation_history,True,,deny,P340,patient,,,M23,PASS
+,False,deny,invoice_list,True,,allow,P332,patient,,,M24,FAIL (violation found)
+,True,deny,manage_profile,True,,deny,P286,patient,"('365214587',)","('365214587',)",M29,PASS

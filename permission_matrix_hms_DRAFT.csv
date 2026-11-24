@@ -1,0 +1,453 @@
+policy_ref,role,operation,resource,ownership,endpoint,decision
+P001,admin,backup and restore,database,none,admin/backup_restore,allow
+P002,doctor,backup and restore,database,none,admin/backup_restore,deny
+P003,nurse,backup and restore,database,none,admin/backup_restore,deny
+P004,patient,backup and restore,database,none,admin/backup_restore,deny
+P005,pharmacist,backup and restore,database,none,admin/backup_restore,deny
+P006,laboratorist,backup and restore,database,none,admin/backup_restore,deny
+P007,accountant,backup and restore,database,none,admin/backup_restore,deny
+P008,admin,view,dashboard,none,admin/dashboard,allow
+P009,doctor,view,dashboard,none,admin/dashboard,deny
+P010,nurse,view,dashboard,none,admin/dashboard,deny
+P011,patient,view,dashboard,none,admin/dashboard,deny
+P012,pharmacist,view,dashboard,none,admin/dashboard,deny
+P013,laboratorist,view,dashboard,none,admin/dashboard,deny
+P014,accountant,view,dashboard,none,admin/dashboard,deny
+P015,admin,manage accountants,accountant account,none,admin/manage_accountant,allow
+P016,doctor,manage accountants,accountant account,none,admin/manage_accountant,deny
+P017,nurse,manage accountants,accountant account,none,admin/manage_accountant,deny
+P018,patient,manage accountants,accountant account,none,admin/manage_accountant,deny
+P019,pharmacist,manage accountants,accountant account,none,admin/manage_accountant,deny
+P020,laboratorist,manage accountants,accountant account,none,admin/manage_accountant,deny
+P021,accountant,manage accountants,accountant account,none,admin/manage_accountant,deny
+P022,admin,manage,department,none,admin/manage_department,allow
+P023,doctor,manage,department,none,admin/manage_department,deny
+P024,nurse,manage,department,none,admin/manage_department,deny
+P025,patient,manage,department,none,admin/manage_department,deny
+P026,pharmacist,manage,department,none,admin/manage_department,deny
+P027,laboratorist,manage,department,none,admin/manage_department,deny
+P028,accountant,manage,department,none,admin/manage_department,deny
+P029,admin,manage doctors,doctor account,none,admin/manage_doctor,allow
+P030,doctor,manage doctors,doctor account,none,admin/manage_doctor,deny
+P031,nurse,manage doctors,doctor account,none,admin/manage_doctor,deny
+P032,patient,manage doctors,doctor account,none,admin/manage_doctor,deny
+P033,pharmacist,manage doctors,doctor account,none,admin/manage_doctor,deny
+P034,laboratorist,manage doctors,doctor account,none,admin/manage_doctor,deny
+P035,accountant,manage doctors,doctor account,none,admin/manage_doctor,deny
+P036,admin,manage,email template,none,admin/manage_email_template,allow
+P037,doctor,manage,email template,none,admin/manage_email_template,deny
+P038,nurse,manage,email template,none,admin/manage_email_template,deny
+P039,patient,manage,email template,none,admin/manage_email_template,deny
+P040,pharmacist,manage,email template,none,admin/manage_email_template,deny
+P041,laboratorist,manage,email template,none,admin/manage_email_template,deny
+P042,accountant,manage,email template,none,admin/manage_email_template,deny
+P043,admin,manage laboratorists,laboratorist account,none,admin/manage_laboratorist,allow
+P044,doctor,manage laboratorists,laboratorist account,none,admin/manage_laboratorist,deny
+P045,nurse,manage laboratorists,laboratorist account,none,admin/manage_laboratorist,deny
+P046,patient,manage laboratorists,laboratorist account,none,admin/manage_laboratorist,deny
+P047,pharmacist,manage laboratorists,laboratorist account,none,admin/manage_laboratorist,deny
+P048,laboratorist,manage laboratorists,laboratorist account,none,admin/manage_laboratorist,deny
+P049,accountant,manage laboratorists,laboratorist account,none,admin/manage_laboratorist,deny
+P050,admin,manage,language,none,admin/manage_language,allow
+P051,doctor,manage,language,none,admin/manage_language,deny
+P052,nurse,manage,language,none,admin/manage_language,deny
+P053,patient,manage,language,none,admin/manage_language,deny
+P054,pharmacist,manage,language,none,admin/manage_language,deny
+P055,laboratorist,manage,language,none,admin/manage_language,deny
+P056,accountant,manage,language,none,admin/manage_language,deny
+P057,admin,manage,noticeboard,none,admin/manage_noticeboard,allow
+P058,doctor,manage,noticeboard,none,admin/manage_noticeboard,deny
+P059,nurse,manage,noticeboard,none,admin/manage_noticeboard,deny
+P060,patient,manage,noticeboard,none,admin/manage_noticeboard,deny
+P061,pharmacist,manage,noticeboard,none,admin/manage_noticeboard,deny
+P062,laboratorist,manage,noticeboard,none,admin/manage_noticeboard,deny
+P063,accountant,manage,noticeboard,none,admin/manage_noticeboard,deny
+P064,admin,manage nurses,nurse account,none,admin/manage_nurse,allow
+P065,doctor,manage nurses,nurse account,none,admin/manage_nurse,deny
+P066,nurse,manage nurses,nurse account,none,admin/manage_nurse,deny
+P067,patient,manage nurses,nurse account,none,admin/manage_nurse,deny
+P068,pharmacist,manage nurses,nurse account,none,admin/manage_nurse,deny
+P069,laboratorist,manage nurses,nurse account,none,admin/manage_nurse,deny
+P070,accountant,manage nurses,nurse account,none,admin/manage_nurse,deny
+P071,admin,manage patients,patient account,none,admin/manage_patient,allow
+P072,doctor,manage patients,patient account,none,admin/manage_patient,deny
+P073,nurse,manage patients,patient account,none,admin/manage_patient,deny
+P074,patient,manage patients,patient account,none,admin/manage_patient,deny
+P075,pharmacist,manage patients,patient account,none,admin/manage_patient,deny
+P076,laboratorist,manage patients,patient account,none,admin/manage_patient,deny
+P077,accountant,manage patients,patient account,none,admin/manage_patient,deny
+P078,admin,manage pharmacists,pharmacist account,none,admin/manage_pharmacist,allow
+P079,doctor,manage pharmacists,pharmacist account,none,admin/manage_pharmacist,deny
+P080,nurse,manage pharmacists,pharmacist account,none,admin/manage_pharmacist,deny
+P081,patient,manage pharmacists,pharmacist account,none,admin/manage_pharmacist,deny
+P082,pharmacist,manage pharmacists,pharmacist account,none,admin/manage_pharmacist,deny
+P083,laboratorist,manage pharmacists,pharmacist account,none,admin/manage_pharmacist,deny
+P084,accountant,manage pharmacists,pharmacist account,none,admin/manage_pharmacist,deny
+P085,admin,manage,profile,own,admin/manage_profile,allow
+P086,admin,manage,profile,other,admin/manage_profile,deny
+P087,doctor,manage,profile,other,admin/manage_profile,deny
+P088,nurse,manage,profile,other,admin/manage_profile,deny
+P089,patient,manage,profile,other,admin/manage_profile,deny
+P090,pharmacist,manage,profile,other,admin/manage_profile,deny
+P091,laboratorist,manage,profile,other,admin/manage_profile,deny
+P092,accountant,manage,profile,other,admin/manage_profile,deny
+P093,admin,manage,system settings,none,admin/system_settings,allow
+P094,doctor,manage,system settings,none,admin/system_settings,deny
+P095,nurse,manage,system settings,none,admin/system_settings,deny
+P096,patient,manage,system settings,none,admin/system_settings,deny
+P097,pharmacist,manage,system settings,none,admin/system_settings,deny
+P098,laboratorist,manage,system settings,none,admin/system_settings,deny
+P099,accountant,manage,system settings,none,admin/system_settings,deny
+P100,admin,view,appointment,none,admin/view_appointment,allow
+P101,doctor,view,appointment,none,admin/view_appointment,deny
+P102,nurse,view,appointment,none,admin/view_appointment,deny
+P103,patient,view,appointment,none,admin/view_appointment,deny
+P104,pharmacist,view,appointment,none,admin/view_appointment,deny
+P105,laboratorist,view,appointment,none,admin/view_appointment,deny
+P106,accountant,view,appointment,none,admin/view_appointment,deny
+P107,admin,view,bed status,none,admin/view_bed_status,allow
+P108,doctor,view,bed status,none,admin/view_bed_status,deny
+P109,nurse,view,bed status,none,admin/view_bed_status,deny
+P110,patient,view,bed status,none,admin/view_bed_status,deny
+P111,pharmacist,view,bed status,none,admin/view_bed_status,deny
+P112,laboratorist,view,bed status,none,admin/view_bed_status,deny
+P113,accountant,view,bed status,none,admin/view_bed_status,deny
+P114,admin,view,blood bank,none,admin/view_blood_bank,allow
+P115,doctor,view,blood bank,none,admin/view_blood_bank,deny
+P116,nurse,view,blood bank,none,admin/view_blood_bank,deny
+P117,patient,view,blood bank,none,admin/view_blood_bank,deny
+P118,pharmacist,view,blood bank,none,admin/view_blood_bank,deny
+P119,laboratorist,view,blood bank,none,admin/view_blood_bank,deny
+P120,accountant,view,blood bank,none,admin/view_blood_bank,deny
+P121,admin,view,medicine,none,admin/view_medicine,allow
+P122,doctor,view,medicine,none,admin/view_medicine,deny
+P123,nurse,view,medicine,none,admin/view_medicine,deny
+P124,patient,view,medicine,none,admin/view_medicine,deny
+P125,pharmacist,view,medicine,none,admin/view_medicine,deny
+P126,laboratorist,view,medicine,none,admin/view_medicine,deny
+P127,accountant,view,medicine,none,admin/view_medicine,deny
+P128,admin,view,payment,none,admin/view_payment,allow
+P129,doctor,view,payment,none,admin/view_payment,deny
+P130,nurse,view,payment,none,admin/view_payment,deny
+P131,patient,view,payment,none,admin/view_payment,deny
+P132,pharmacist,view,payment,none,admin/view_payment,deny
+P133,laboratorist,view,payment,none,admin/view_payment,deny
+P134,accountant,view,payment,none,admin/view_payment,deny
+P135,admin,view,report,none,admin/view_report,allow
+P136,doctor,view,report,none,admin/view_report,deny
+P137,nurse,view,report,none,admin/view_report,deny
+P138,patient,view,report,none,admin/view_report,deny
+P139,pharmacist,view,report,none,admin/view_report,deny
+P140,laboratorist,view,report,none,admin/view_report,deny
+P141,accountant,view,report,none,admin/view_report,deny
+P142,admin,view,dashboard,none,doctor/dashboard,deny
+P143,doctor,view,dashboard,none,doctor/dashboard,allow
+P144,nurse,view,dashboard,none,doctor/dashboard,deny
+P145,patient,view,dashboard,none,doctor/dashboard,deny
+P146,pharmacist,view,dashboard,none,doctor/dashboard,deny
+P147,laboratorist,view,dashboard,none,doctor/dashboard,deny
+P148,accountant,view,dashboard,none,doctor/dashboard,deny
+P149,admin,view,appointment,other,doctor/manage_appointment,deny
+P150,doctor,view,appointment,own,doctor/manage_appointment,allow
+P151,doctor,view,appointment,other,doctor/manage_appointment,deny
+P152,nurse,view,appointment,other,doctor/manage_appointment,deny
+P153,patient,view,appointment,other,doctor/manage_appointment,deny
+P154,pharmacist,view,appointment,other,doctor/manage_appointment,deny
+P155,laboratorist,view,appointment,other,doctor/manage_appointment,deny
+P156,accountant,view,appointment,other,doctor/manage_appointment,deny
+P157,admin,edit,appointment,other,doctor/manage_appointment,deny
+P158,doctor,edit,appointment,own,doctor/manage_appointment,allow
+P159,doctor,edit,appointment,other,doctor/manage_appointment,deny
+P160,nurse,edit,appointment,other,doctor/manage_appointment,deny
+P161,patient,edit,appointment,other,doctor/manage_appointment,deny
+P162,pharmacist,edit,appointment,other,doctor/manage_appointment,deny
+P163,laboratorist,edit,appointment,other,doctor/manage_appointment,deny
+P164,accountant,edit,appointment,other,doctor/manage_appointment,deny
+P165,admin,delete,appointment,other,doctor/manage_appointment,deny
+P166,doctor,delete,appointment,own,doctor/manage_appointment,allow
+P167,doctor,delete,appointment,other,doctor/manage_appointment,deny
+P168,nurse,delete,appointment,other,doctor/manage_appointment,deny
+P169,patient,delete,appointment,other,doctor/manage_appointment,deny
+P170,pharmacist,delete,appointment,other,doctor/manage_appointment,deny
+P171,laboratorist,delete,appointment,other,doctor/manage_appointment,deny
+P172,accountant,delete,appointment,other,doctor/manage_appointment,deny
+P173,admin,manage,bed allotment,none,doctor/manage_bed_allotment,deny
+P174,doctor,manage,bed allotment,none,doctor/manage_bed_allotment,allow
+P175,nurse,manage,bed allotment,none,doctor/manage_bed_allotment,deny
+P176,patient,manage,bed allotment,none,doctor/manage_bed_allotment,deny
+P177,pharmacist,manage,bed allotment,none,doctor/manage_bed_allotment,deny
+P178,laboratorist,manage,bed allotment,none,doctor/manage_bed_allotment,deny
+P179,accountant,manage,bed allotment,none,doctor/manage_bed_allotment,deny
+P180,admin,manage,patient record,none,doctor/manage_patient,deny
+P181,doctor,manage,patient record,none,doctor/manage_patient,allow
+P182,nurse,manage,patient record,none,doctor/manage_patient,deny
+P183,patient,manage,patient record,none,doctor/manage_patient,deny
+P184,pharmacist,manage,patient record,none,doctor/manage_patient,deny
+P185,laboratorist,manage,patient record,none,doctor/manage_patient,deny
+P186,accountant,manage,patient record,none,doctor/manage_patient,deny
+P187,admin,manage,prescription,other,doctor/manage_prescription,deny
+P188,doctor,manage,prescription,own,doctor/manage_prescription,allow
+P189,doctor,manage,prescription,other,doctor/manage_prescription,deny
+P190,nurse,manage,prescription,other,doctor/manage_prescription,deny
+P191,patient,manage,prescription,other,doctor/manage_prescription,deny
+P192,pharmacist,manage,prescription,other,doctor/manage_prescription,deny
+P193,laboratorist,manage,prescription,other,doctor/manage_prescription,deny
+P194,accountant,manage,prescription,other,doctor/manage_prescription,deny
+P195,admin,manage,profile,other,doctor/manage_profile,deny
+P196,doctor,manage,profile,own,doctor/manage_profile,allow
+P197,doctor,manage,profile,other,doctor/manage_profile,deny
+P198,nurse,manage,profile,other,doctor/manage_profile,deny
+P199,patient,manage,profile,other,doctor/manage_profile,deny
+P200,pharmacist,manage,profile,other,doctor/manage_profile,deny
+P201,laboratorist,manage,profile,other,doctor/manage_profile,deny
+P202,accountant,manage,profile,other,doctor/manage_profile,deny
+P203,admin,manage,report,other,doctor/manage_report,deny
+P204,doctor,manage,report,own,doctor/manage_report,allow
+P205,doctor,manage,report,other,doctor/manage_report,deny
+P206,nurse,manage,report,other,doctor/manage_report,deny
+P207,patient,manage,report,other,doctor/manage_report,deny
+P208,pharmacist,manage,report,other,doctor/manage_report,deny
+P209,laboratorist,manage,report,other,doctor/manage_report,deny
+P210,accountant,manage,report,other,doctor/manage_report,deny
+P211,admin,view,blood bank,none,doctor/view_blood_bank,deny
+P212,doctor,view,blood bank,none,doctor/view_blood_bank,allow
+P213,nurse,view,blood bank,none,doctor/view_blood_bank,deny
+P214,patient,view,blood bank,none,doctor/view_blood_bank,deny
+P215,pharmacist,view,blood bank,none,doctor/view_blood_bank,deny
+P216,laboratorist,view,blood bank,none,doctor/view_blood_bank,deny
+P217,accountant,view,blood bank,none,doctor/view_blood_bank,deny
+P218,admin,view,dashboard,none,nurse/dashboard,deny
+P219,doctor,view,dashboard,none,nurse/dashboard,deny
+P220,nurse,view,dashboard,none,nurse/dashboard,allow
+P221,patient,view,dashboard,none,nurse/dashboard,deny
+P222,pharmacist,view,dashboard,none,nurse/dashboard,deny
+P223,laboratorist,view,dashboard,none,nurse/dashboard,deny
+P224,accountant,view,dashboard,none,nurse/dashboard,deny
+P225,admin,manage,bed,none,nurse/manage_bed,deny
+P226,doctor,manage,bed,none,nurse/manage_bed,deny
+P227,nurse,manage,bed,none,nurse/manage_bed,allow
+P228,patient,manage,bed,none,nurse/manage_bed,deny
+P229,pharmacist,manage,bed,none,nurse/manage_bed,deny
+P230,laboratorist,manage,bed,none,nurse/manage_bed,deny
+P231,accountant,manage,bed,none,nurse/manage_bed,deny
+P232,admin,manage,bed allotment,none,nurse/manage_bed_allotment,deny
+P233,doctor,manage,bed allotment,none,nurse/manage_bed_allotment,deny
+P234,nurse,manage,bed allotment,none,nurse/manage_bed_allotment,allow
+P235,patient,manage,bed allotment,none,nurse/manage_bed_allotment,deny
+P236,pharmacist,manage,bed allotment,none,nurse/manage_bed_allotment,deny
+P237,laboratorist,manage,bed allotment,none,nurse/manage_bed_allotment,deny
+P238,accountant,manage,bed allotment,none,nurse/manage_bed_allotment,deny
+P239,admin,manage,blood bank,none,nurse/manage_blood_bank,deny
+P240,doctor,manage,blood bank,none,nurse/manage_blood_bank,deny
+P241,nurse,manage,blood bank,none,nurse/manage_blood_bank,allow
+P242,patient,manage,blood bank,none,nurse/manage_blood_bank,deny
+P243,pharmacist,manage,blood bank,none,nurse/manage_blood_bank,deny
+P244,laboratorist,manage,blood bank,none,nurse/manage_blood_bank,deny
+P245,accountant,manage,blood bank,none,nurse/manage_blood_bank,deny
+P246,admin,manage,blood donor,none,nurse/manage_blood_donor,deny
+P247,doctor,manage,blood donor,none,nurse/manage_blood_donor,deny
+P248,nurse,manage,blood donor,none,nurse/manage_blood_donor,allow
+P249,patient,manage,blood donor,none,nurse/manage_blood_donor,deny
+P250,pharmacist,manage,blood donor,none,nurse/manage_blood_donor,deny
+P251,laboratorist,manage,blood donor,none,nurse/manage_blood_donor,deny
+P252,accountant,manage,blood donor,none,nurse/manage_blood_donor,deny
+P253,admin,manage,patient record,none,nurse/manage_patient,deny
+P254,doctor,manage,patient record,none,nurse/manage_patient,deny
+P255,nurse,manage,patient record,none,nurse/manage_patient,allow
+P256,patient,manage,patient record,none,nurse/manage_patient,deny
+P257,pharmacist,manage,patient record,none,nurse/manage_patient,deny
+P258,laboratorist,manage,patient record,none,nurse/manage_patient,deny
+P259,accountant,manage,patient record,none,nurse/manage_patient,deny
+P260,admin,manage,profile,other,nurse/manage_profile,deny
+P261,doctor,manage,profile,other,nurse/manage_profile,deny
+P262,nurse,manage,profile,own,nurse/manage_profile,allow
+P263,nurse,manage,profile,other,nurse/manage_profile,deny
+P264,patient,manage,profile,other,nurse/manage_profile,deny
+P265,pharmacist,manage,profile,other,nurse/manage_profile,deny
+P266,laboratorist,manage,profile,other,nurse/manage_profile,deny
+P267,accountant,manage,profile,other,nurse/manage_profile,deny
+P268,admin,manage,report,none,nurse/manage_report,deny
+P269,doctor,manage,report,none,nurse/manage_report,deny
+P270,nurse,manage,report,none,nurse/manage_report,allow
+P271,patient,manage,report,none,nurse/manage_report,deny
+P272,pharmacist,manage,report,none,nurse/manage_report,deny
+P273,laboratorist,manage,report,none,nurse/manage_report,deny
+P274,accountant,manage,report,none,nurse/manage_report,deny
+P275,admin,view,dashboard,none,patient/dashboard,deny
+P276,doctor,view,dashboard,none,patient/dashboard,deny
+P277,nurse,view,dashboard,none,patient/dashboard,deny
+P278,patient,view,dashboard,none,patient/dashboard,allow
+P279,pharmacist,view,dashboard,none,patient/dashboard,deny
+P280,laboratorist,view,dashboard,none,patient/dashboard,deny
+P281,accountant,view,dashboard,none,patient/dashboard,deny
+P282,admin,manage,profile,other,patient/manage_profile,deny
+P283,doctor,manage,profile,other,patient/manage_profile,deny
+P284,nurse,manage,profile,other,patient/manage_profile,deny
+P285,patient,manage,profile,own,patient/manage_profile,allow
+P286,patient,manage,profile,other,patient/manage_profile,deny
+P287,pharmacist,manage,profile,other,patient/manage_profile,deny
+P288,laboratorist,manage,profile,other,patient/manage_profile,deny
+P289,accountant,manage,profile,other,patient/manage_profile,deny
+P290,admin,view,payment history,other,patient/payment_history,deny
+P291,doctor,view,payment history,other,patient/payment_history,deny
+P292,nurse,view,payment history,other,patient/payment_history,deny
+P293,patient,view,payment history,own,patient/payment_history,allow
+P294,patient,view,payment history,other,patient/payment_history,deny
+P295,pharmacist,view,payment history,other,patient/payment_history,deny
+P296,laboratorist,view,payment history,other,patient/payment_history,deny
+P297,accountant,view,payment history,other,patient/payment_history,deny
+P298,admin,view,admit history,other,patient/view_admit_history,deny
+P299,doctor,view,admit history,other,patient/view_admit_history,deny
+P300,nurse,view,admit history,other,patient/view_admit_history,deny
+P301,patient,view,admit history,own,patient/view_admit_history,allow
+P302,patient,view,admit history,other,patient/view_admit_history,deny
+P303,pharmacist,view,admit history,other,patient/view_admit_history,deny
+P304,laboratorist,view,admit history,other,patient/view_admit_history,deny
+P305,accountant,view,admit history,other,patient/view_admit_history,deny
+P306,admin,view,appointment,other,patient/view_appointment,deny
+P307,doctor,view,appointment,other,patient/view_appointment,deny
+P308,nurse,view,appointment,other,patient/view_appointment,deny
+P309,patient,view,appointment,own,patient/view_appointment,allow
+P310,patient,view,appointment,other,patient/view_appointment,deny
+P311,pharmacist,view,appointment,other,patient/view_appointment,deny
+P312,laboratorist,view,appointment,other,patient/view_appointment,deny
+P313,accountant,view,appointment,other,patient/view_appointment,deny
+P314,admin,view,blood bank,none,patient/view_blood_bank,deny
+P315,doctor,view,blood bank,none,patient/view_blood_bank,deny
+P316,nurse,view,blood bank,none,patient/view_blood_bank,deny
+P317,patient,view,blood bank,none,patient/view_blood_bank,allow
+P318,pharmacist,view,blood bank,none,patient/view_blood_bank,deny
+P319,laboratorist,view,blood bank,none,patient/view_blood_bank,deny
+P320,accountant,view,blood bank,none,patient/view_blood_bank,deny
+P321,admin,view,doctor,none,patient/view_doctor,deny
+P322,doctor,view,doctor,none,patient/view_doctor,deny
+P323,nurse,view,doctor,none,patient/view_doctor,deny
+P324,patient,view,doctor,none,patient/view_doctor,allow
+P325,pharmacist,view,doctor,none,patient/view_doctor,deny
+P326,laboratorist,view,doctor,none,patient/view_doctor,deny
+P327,accountant,view,doctor,none,patient/view_doctor,deny
+P328,admin,view,invoice,other,patient/view_invoice,deny
+P329,doctor,view,invoice,other,patient/view_invoice,deny
+P330,nurse,view,invoice,other,patient/view_invoice,deny
+P331,patient,view,invoice,own,patient/view_invoice,allow
+P332,patient,view,invoice,other,patient/view_invoice,deny
+P333,pharmacist,view,invoice,other,patient/view_invoice,deny
+P334,laboratorist,view,invoice,other,patient/view_invoice,deny
+P335,accountant,view,invoice,other,patient/view_invoice,deny
+P336,admin,view,operation history,other,patient/view_operation_history,deny
+P337,doctor,view,operation history,other,patient/view_operation_history,deny
+P338,nurse,view,operation history,other,patient/view_operation_history,deny
+P339,patient,view,operation history,own,patient/view_operation_history,allow
+P340,patient,view,operation history,other,patient/view_operation_history,deny
+P341,pharmacist,view,operation history,other,patient/view_operation_history,deny
+P342,laboratorist,view,operation history,other,patient/view_operation_history,deny
+P343,accountant,view,operation history,other,patient/view_operation_history,deny
+P344,admin,view,prescription,other,patient/view_prescription,deny
+P345,doctor,view,prescription,other,patient/view_prescription,deny
+P346,nurse,view,prescription,other,patient/view_prescription,deny
+P347,patient,view,prescription,own,patient/view_prescription,allow
+P348,patient,view,prescription,other,patient/view_prescription,deny
+P349,pharmacist,view,prescription,other,patient/view_prescription,deny
+P350,laboratorist,view,prescription,other,patient/view_prescription,deny
+P351,accountant,view,prescription,other,patient/view_prescription,deny
+P352,admin,view,dashboard,none,pharmacist/dashboard,deny
+P353,doctor,view,dashboard,none,pharmacist/dashboard,deny
+P354,nurse,view,dashboard,none,pharmacist/dashboard,deny
+P355,patient,view,dashboard,none,pharmacist/dashboard,deny
+P356,pharmacist,view,dashboard,none,pharmacist/dashboard,allow
+P357,laboratorist,view,dashboard,none,pharmacist/dashboard,deny
+P358,accountant,view,dashboard,none,pharmacist/dashboard,deny
+P359,admin,manage,medicine,none,pharmacist/manage_medicine,deny
+P360,doctor,manage,medicine,none,pharmacist/manage_medicine,deny
+P361,nurse,manage,medicine,none,pharmacist/manage_medicine,deny
+P362,patient,manage,medicine,none,pharmacist/manage_medicine,deny
+P363,pharmacist,manage,medicine,none,pharmacist/manage_medicine,allow
+P364,laboratorist,manage,medicine,none,pharmacist/manage_medicine,deny
+P365,accountant,manage,medicine,none,pharmacist/manage_medicine,deny
+P366,admin,manage,medicine category,none,pharmacist/manage_medicine_category,deny
+P367,doctor,manage,medicine category,none,pharmacist/manage_medicine_category,deny
+P368,nurse,manage,medicine category,none,pharmacist/manage_medicine_category,deny
+P369,patient,manage,medicine category,none,pharmacist/manage_medicine_category,deny
+P370,pharmacist,manage,medicine category,none,pharmacist/manage_medicine_category,allow
+P371,laboratorist,manage,medicine category,none,pharmacist/manage_medicine_category,deny
+P372,accountant,manage,medicine category,none,pharmacist/manage_medicine_category,deny
+P373,admin,manage,prescription,none,pharmacist/manage_prescription,deny
+P374,doctor,manage,prescription,none,pharmacist/manage_prescription,deny
+P375,nurse,manage,prescription,none,pharmacist/manage_prescription,deny
+P376,patient,manage,prescription,none,pharmacist/manage_prescription,deny
+P377,pharmacist,manage,prescription,none,pharmacist/manage_prescription,allow
+P378,laboratorist,manage,prescription,none,pharmacist/manage_prescription,deny
+P379,accountant,manage,prescription,none,pharmacist/manage_prescription,deny
+P380,admin,manage,profile,other,pharmacist/manage_profile,deny
+P381,doctor,manage,profile,other,pharmacist/manage_profile,deny
+P382,nurse,manage,profile,other,pharmacist/manage_profile,deny
+P383,patient,manage,profile,other,pharmacist/manage_profile,deny
+P384,pharmacist,manage,profile,own,pharmacist/manage_profile,allow
+P385,pharmacist,manage,profile,other,pharmacist/manage_profile,deny
+P386,laboratorist,manage,profile,other,pharmacist/manage_profile,deny
+P387,accountant,manage,profile,other,pharmacist/manage_profile,deny
+P388,admin,view,dashboard,none,laboratorist/dashboard,deny
+P389,doctor,view,dashboard,none,laboratorist/dashboard,deny
+P390,nurse,view,dashboard,none,laboratorist/dashboard,deny
+P391,patient,view,dashboard,none,laboratorist/dashboard,deny
+P392,pharmacist,view,dashboard,none,laboratorist/dashboard,deny
+P393,laboratorist,view,dashboard,none,laboratorist/dashboard,allow
+P394,accountant,view,dashboard,none,laboratorist/dashboard,deny
+P395,admin,manage,blood bank,none,laboratorist/manage_blood_bank,deny
+P396,doctor,manage,blood bank,none,laboratorist/manage_blood_bank,deny
+P397,nurse,manage,blood bank,none,laboratorist/manage_blood_bank,deny
+P398,patient,manage,blood bank,none,laboratorist/manage_blood_bank,deny
+P399,pharmacist,manage,blood bank,none,laboratorist/manage_blood_bank,deny
+P400,laboratorist,manage,blood bank,none,laboratorist/manage_blood_bank,allow
+P401,accountant,manage,blood bank,none,laboratorist/manage_blood_bank,deny
+P402,admin,manage,blood donor,none,laboratorist/manage_blood_donor,deny
+P403,doctor,manage,blood donor,none,laboratorist/manage_blood_donor,deny
+P404,nurse,manage,blood donor,none,laboratorist/manage_blood_donor,deny
+P405,patient,manage,blood donor,none,laboratorist/manage_blood_donor,deny
+P406,pharmacist,manage,blood donor,none,laboratorist/manage_blood_donor,deny
+P407,laboratorist,manage,blood donor,none,laboratorist/manage_blood_donor,allow
+P408,accountant,manage,blood donor,none,laboratorist/manage_blood_donor,deny
+P409,admin,manage,prescription,none,laboratorist/manage_prescription,deny
+P410,doctor,manage,prescription,none,laboratorist/manage_prescription,deny
+P411,nurse,manage,prescription,none,laboratorist/manage_prescription,deny
+P412,patient,manage,prescription,none,laboratorist/manage_prescription,deny
+P413,pharmacist,manage,prescription,none,laboratorist/manage_prescription,deny
+P414,laboratorist,manage,prescription,none,laboratorist/manage_prescription,allow
+P415,accountant,manage,prescription,none,laboratorist/manage_prescription,deny
+P416,admin,manage,profile,other,laboratorist/manage_profile,deny
+P417,doctor,manage,profile,other,laboratorist/manage_profile,deny
+P418,nurse,manage,profile,other,laboratorist/manage_profile,deny
+P419,patient,manage,profile,other,laboratorist/manage_profile,deny
+P420,pharmacist,manage,profile,other,laboratorist/manage_profile,deny
+P421,laboratorist,manage,profile,own,laboratorist/manage_profile,allow
+P422,laboratorist,manage,profile,other,laboratorist/manage_profile,deny
+P423,accountant,manage,profile,other,laboratorist/manage_profile,deny
+P424,admin,view,dashboard,none,accountant/dashboard,deny
+P425,doctor,view,dashboard,none,accountant/dashboard,deny
+P426,nurse,view,dashboard,none,accountant/dashboard,deny
+P427,patient,view,dashboard,none,accountant/dashboard,deny
+P428,pharmacist,view,dashboard,none,accountant/dashboard,deny
+P429,laboratorist,view,dashboard,none,accountant/dashboard,deny
+P430,accountant,view,dashboard,none,accountant/dashboard,allow
+P431,admin,manage,invoice,none,accountant/manage_invoice,deny
+P432,doctor,manage,invoice,none,accountant/manage_invoice,deny
+P433,nurse,manage,invoice,none,accountant/manage_invoice,deny
+P434,patient,manage,invoice,none,accountant/manage_invoice,deny
+P435,pharmacist,manage,invoice,none,accountant/manage_invoice,deny
+P436,laboratorist,manage,invoice,none,accountant/manage_invoice,deny
+P437,accountant,manage,invoice,none,accountant/manage_invoice,allow
+P438,admin,manage,profile,other,accountant/manage_profile,deny
+P439,doctor,manage,profile,other,accountant/manage_profile,deny
+P440,nurse,manage,profile,other,accountant/manage_profile,deny
+P441,patient,manage,profile,other,accountant/manage_profile,deny
+P442,pharmacist,manage,profile,other,accountant/manage_profile,deny
+P443,laboratorist,manage,profile,other,accountant/manage_profile,deny
+P444,accountant,manage,profile,own,accountant/manage_profile,allow
+P445,accountant,manage,profile,other,accountant/manage_profile,deny
+P446,admin,view,payment,none,accountant/view_payment,deny
+P447,doctor,view,payment,none,accountant/view_payment,deny
+P448,nurse,view,payment,none,accountant/view_payment,deny
+P449,patient,view,payment,none,accountant/view_payment,deny
+P450,pharmacist,view,payment,none,accountant/view_payment,deny
+P451,laboratorist,view,payment,none,accountant/view_payment,deny
+P452,accountant,view,payment,none,accountant/view_payment,allow

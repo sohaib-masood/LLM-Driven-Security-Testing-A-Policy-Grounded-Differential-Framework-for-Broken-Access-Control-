@@ -1,0 +1,64 @@
+policy_ref,role,operation,resource,ownership,endpoint,decision
+P005,pharmacist,backup and restore,database,none,admin/backup_restore,deny
+P012,pharmacist,view,dashboard,none,admin/dashboard,deny
+P019,pharmacist,manage accountants,accountant account,none,admin/manage_accountant,deny
+P026,pharmacist,manage,department,none,admin/manage_department,deny
+P033,pharmacist,manage doctors,doctor account,none,admin/manage_doctor,deny
+P040,pharmacist,manage,email template,none,admin/manage_email_template,deny
+P047,pharmacist,manage laboratorists,laboratorist account,none,admin/manage_laboratorist,deny
+P054,pharmacist,manage,language,none,admin/manage_language,deny
+P061,pharmacist,manage,noticeboard,none,admin/manage_noticeboard,deny
+P068,pharmacist,manage nurses,nurse account,none,admin/manage_nurse,deny
+P075,pharmacist,manage patients,patient account,none,admin/manage_patient,deny
+P082,pharmacist,manage pharmacists,pharmacist account,none,admin/manage_pharmacist,deny
+P090,pharmacist,manage,profile,other,admin/manage_profile,deny
+P097,pharmacist,manage,system settings,none,admin/system_settings,deny
+P104,pharmacist,view,appointment,none,admin/view_appointment,deny
+P111,pharmacist,view,bed status,none,admin/view_bed_status,deny
+P118,pharmacist,view,blood bank,none,admin/view_blood_bank,deny
+P125,pharmacist,view,medicine,none,admin/view_medicine,deny
+P132,pharmacist,view,payment,none,admin/view_payment,deny
+P139,pharmacist,view,report,none,admin/view_report,deny
+P146,pharmacist,view,dashboard,none,doctor/dashboard,deny
+P154,pharmacist,view,appointment,other,doctor/manage_appointment,deny
+P162,pharmacist,edit,appointment,other,doctor/manage_appointment,deny
+P170,pharmacist,delete,appointment,other,doctor/manage_appointment,deny
+P177,pharmacist,manage,bed allotment,none,doctor/manage_bed_allotment,deny
+P184,pharmacist,manage,patient record,none,doctor/manage_patient,deny
+P192,pharmacist,manage,prescription,other,doctor/manage_prescription,deny
+P200,pharmacist,manage,profile,other,doctor/manage_profile,deny
+P208,pharmacist,manage,report,other,doctor/manage_report,deny
+P215,pharmacist,view,blood bank,none,doctor/view_blood_bank,deny
+P222,pharmacist,view,dashboard,none,nurse/dashboard,deny
+P229,pharmacist,manage,bed,none,nurse/manage_bed,deny
+P236,pharmacist,manage,bed allotment,none,nurse/manage_bed_allotment,deny
+P243,pharmacist,manage,blood bank,none,nurse/manage_blood_bank,deny
+P250,pharmacist,manage,blood donor,none,nurse/manage_blood_donor,deny
+P257,pharmacist,manage,patient record,none,nurse/manage_patient,deny
+P265,pharmacist,manage,profile,other,nurse/manage_profile,deny
+P272,pharmacist,manage,report,none,nurse/manage_report,deny
+P279,pharmacist,view,dashboard,none,patient/dashboard,deny
+P287,pharmacist,manage,profile,other,patient/manage_profile,deny
+P295,pharmacist,view,payment history,other,patient/payment_history,deny
+P303,pharmacist,view,admit history,other,patient/view_admit_history,deny
+P311,pharmacist,view,appointment,other,patient/view_appointment,deny
+P318,pharmacist,view,blood bank,none,patient/view_blood_bank,deny
+P325,pharmacist,view,doctor,none,patient/view_doctor,deny
+P333,pharmacist,view,invoice,other,patient/view_invoice,deny
+P341,pharmacist,view,operation history,other,patient/view_operation_history,deny
+P349,pharmacist,view,prescription,other,patient/view_prescription,deny
+P356,pharmacist,view,dashboard,none,pharmacist/dashboard,allow
+P363,pharmacist,manage,medicine,none,pharmacist/manage_medicine,allow
+P370,pharmacist,manage,medicine category,none,pharmacist/manage_medicine_category,allow
+P377,pharmacist,manage,prescription,none,pharmacist/manage_prescription,allow
+P384,pharmacist,manage,profile,own,pharmacist/manage_profile,allow
+P385,pharmacist,manage,profile,other,pharmacist/manage_profile,deny
+P392,pharmacist,view,dashboard,none,laboratorist/dashboard,deny
+P399,pharmacist,manage,blood bank,none,laboratorist/manage_blood_bank,deny
+P406,pharmacist,manage,blood donor,none,laboratorist/manage_blood_donor,deny
+P413,pharmacist,manage,prescription,none,laboratorist/manage_prescription,deny
+P420,pharmacist,manage,profile,other,laboratorist/manage_profile,deny
+P428,pharmacist,view,dashboard,none,accountant/dashboard,deny
+P435,pharmacist,manage,invoice,none,accountant/manage_invoice,deny
+P442,pharmacist,manage,profile,other,accountant/manage_profile,deny
+P450,pharmacist,view,payment,none,accountant/view_payment,deny

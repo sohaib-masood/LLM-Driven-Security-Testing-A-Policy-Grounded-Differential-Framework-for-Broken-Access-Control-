@@ -1,0 +1,191 @@
+variant,instance,attempt,verdict,note
+V1,appointment,login,PASS,login successful
+V1,appointment,view_own,PASS,doctor view appointment own
+V1,appointment,view_other,PASS,doctor view appointment other
+V1,appointment,delete_other,PASS,doctor delete appointment other
+V1,prescription,own,PASS,own prescription allowed as expected
+V1,prescription,other,PASS,other prescription denied as expected
+V1,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+V1,invoice,own,PASS,own invoice returned 200 without error
+V1,invoice,other,PASS,other invoice marker not found access correctly denied
+M01,appointment,login,PASS,login successful
+M01,appointment,view_own,PASS,doctor view appointment own
+M01,appointment,view_other,PASS,doctor view appointment other
+M01,appointment,delete_other,PASS,doctor delete appointment other
+M01,prescription,own,PASS,own prescription allowed as expected
+M01,prescription,other,PASS,other prescription denied as expected
+M01,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M01,invoice,own,PASS,own invoice returned 200 without error
+M01,invoice,other,PASS,other invoice marker not found access correctly denied
+M02,appointment,login,PASS,login successful
+M02,appointment,view_own,PASS,doctor view appointment own
+M02,appointment,view_other,PASS,doctor view appointment other
+M02,appointment,delete_other,PASS,doctor delete appointment other
+M02,prescription,own,PASS,own prescription allowed as expected
+M02,prescription,other,PASS,other prescription denied as expected
+M02,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M02,invoice,own,PASS,own invoice returned 200 without error
+M02,invoice,other,PASS,other invoice marker not found access correctly denied
+M03,appointment,login,PASS,login successful
+M03,appointment,view_own,PASS,doctor view appointment own
+M03,appointment,view_other,PASS,doctor view appointment other
+M03,appointment,delete_other,PASS,doctor delete appointment other
+M03,prescription,own,PASS,own prescription allowed as expected
+M03,prescription,other,PASS,other prescription denied as expected
+M03,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M03,invoice,own,PASS,own invoice returned 200 without error
+M03,invoice,other,PASS,other invoice marker not found access correctly denied
+M04,appointment,login,PASS,login successful
+M04,appointment,view_own,PASS,doctor view appointment own
+M04,appointment,view_other,PASS,doctor view appointment other
+M04,appointment,delete_other,PASS,doctor delete appointment other
+M04,prescription,own,PASS,own prescription allowed as expected
+M04,prescription,other,PASS,other prescription denied as expected
+M04,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M04,invoice,own,PASS,own invoice returned 200 without error
+M04,invoice,other,PASS,other invoice marker not found access correctly denied
+M05,appointment,login,PASS,login successful
+M05,appointment,view_own,PASS,doctor view appointment own
+M05,appointment,view_other,PASS,doctor view appointment other
+M05,appointment,delete_other,PASS,doctor delete appointment other
+M05,prescription,own,PASS,own prescription allowed as expected
+M05,prescription,other,PASS,other prescription denied as expected
+M05,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M05,invoice,own,PASS,own invoice returned 200 without error
+M05,invoice,other,PASS,other invoice marker not found access correctly denied
+M06,appointment,login,PASS,login successful
+M06,appointment,view_own,PASS,doctor view appointment own
+M06,appointment,view_other,PASS,doctor view appointment other
+M06,appointment,delete_other,PASS,doctor delete appointment other
+M06,prescription,own,PASS,own prescription allowed as expected
+M06,prescription,other,PASS,other prescription denied as expected
+M06,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M06,invoice,own,PASS,own invoice returned 200 without error
+M06,invoice,other,PASS,other invoice marker not found access correctly denied
+M07,appointment,login,PASS,login successful
+M07,appointment,view_own,PASS,doctor view appointment own
+M07,appointment,view_other,PASS,doctor view appointment other
+M07,appointment,delete_other,PASS,doctor delete appointment other - mutant survives: delete goes through silently but response content gives no evidence
+M07,prescription,own,PASS,own prescription allowed as expected
+M07,prescription,other,PASS,other prescription denied as expected
+M07,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M07,invoice,own,PASS,own invoice returned 200 without error
+M07,invoice,other,PASS,other invoice marker not found access correctly denied
+M08,appointment,login,PASS,login successful
+M08,appointment,view_own,PASS,doctor view appointment own
+M08,appointment,view_other,PASS,doctor view appointment other
+M08,appointment,delete_other,PASS,doctor delete appointment other
+M08,prescription,own,PASS,own prescription allowed as expected
+M08,prescription,other,FAIL,marker found - access incorrectly allowed (MUTANT KILLED)
+M08,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M08,invoice,own,PASS,own invoice returned 200 without error
+M08,invoice,other,PASS,other invoice marker not found access correctly denied
+M09,appointment,login,PASS,login successful
+M09,appointment,view_own,PASS,doctor view appointment own
+M09,appointment,view_other,PASS,doctor view appointment other
+M09,appointment,delete_other,PASS,doctor delete appointment other
+M09,prescription,own,PASS,own prescription allowed as expected
+M09,prescription,other,PASS,other prescription denied as expected
+M09,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M09,invoice,own,PASS,own invoice returned 200 without error
+M09,invoice,other,PASS,other invoice marker not found access correctly denied
+M10,appointment,login,PASS,login successful
+M10,appointment,view_own,PASS,doctor view appointment own
+M10,appointment,view_other,PASS,doctor view appointment other
+M10,appointment,delete_other,PASS,doctor delete appointment other
+M10,prescription,own,PASS,own prescription allowed as expected
+M10,prescription,other,PASS,other prescription denied as expected
+M10,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M10,invoice,own,PASS,own invoice returned 200 without error
+M10,invoice,other,PASS,other invoice marker not found access correctly denied
+M11,appointment,login,PASS,login successful
+M11,appointment,view_own,PASS,doctor view appointment own
+M11,appointment,view_other,PASS,doctor view appointment other
+M11,appointment,delete_other,PASS,doctor delete appointment other
+M11,prescription,own,PASS,own prescription allowed as expected
+M11,prescription,other,PASS,other prescription denied as expected
+M11,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M11,invoice,own,PASS,own invoice returned 200 without error
+M11,invoice,other,PASS,other invoice marker not found access correctly denied
+M12,appointment,login,PASS,login successful
+M12,appointment,view_own,PASS,doctor view appointment own
+M12,appointment,view_other,PASS,doctor view appointment other
+M12,appointment,delete_other,PASS,doctor delete appointment other - mutant survives: delete goes through silently but response content gives no evidence
+M12,prescription,own,PASS,own prescription allowed as expected
+M12,prescription,other,PASS,other prescription denied as expected
+M12,doctor_account,patient_manage_doctors,PASS,expected denied observed denied
+M12,invoice,own,PASS,own invoice returned 200 without error
+M12,invoice,other,PASS,other invoice marker not found access correctly denied
+V1,nurse_bed,get,PASS,"GET /nurse/manage_bed allowed/denied as expected"
+V1,nurse_bed,post_token,ERROR,"authenticity_token not found at nurse/manage_bed"
+M13,nurse_bed,get,FAIL,"expected denied=True, got denied=False"
+M13,nurse_bed,post_token,ERROR,"authenticity_token not found"
+V1,admin_patient,get_unauth,PASS,"request denied as expected"
+V1,admin_patient,post_unauth,FAIL,"request was allowed"
+M14,admin_patient,get_unauth,FAIL,"request was allowed"
+M14,admin_patient,post_unauth,FAIL,"request was allowed"
+V1,pharmacist_medicine,get,PASS,"GET allowed"
+V1,pharmacist_medicine,post,PASS,"POST allowed"
+M16,pharmacist_medicine,get,FAIL,"GET was denied (redirect/Refresh detected)"
+M16,pharmacist_medicine,post,FAIL,"failed to obtain token for POST: authenticity_token not found"
+V1,accountant_invoice,get,PASS,"GET allowed"
+V1,accountant_invoice,post,FAIL,"authenticity_token not found"
+M17,accountant_invoice,get,FAIL,"no transport denial"
+M17,accountant_invoice,post,FAIL,"authenticity_token not found"
+V1,appointment_list,get,FAIL,"GET request denied incorrectly - unexpected allow"
+V1,appointment_list,post,FAIL,"POST request denied incorrectly - unexpected allow"
+M19,appointment_list,get,FAIL,"other data rendered (marker found); unexpected allow"
+M19,appointment_list,post,FAIL,"other data rendered (marker found); unexpected allow"
+V1,patient_appointment,p309_own_get,PASS,"own GET"
+V1,patient_appointment,p310_other_get,PASS,"other GET"
+V1,patient_appointment,p310_other_post,FAIL,"could not obtain authenticity_token"
+M20,patient_appointment,p309_own_get,PASS,"own GET"
+M20,patient_appointment,p310_other_get,PASS,"other GET"
+M20,patient_appointment,p310_other_post,FAIL,"could not obtain authenticity_token"
+M26,patient_appointment,p309_own_get,PASS,"own GET"
+M26,patient_appointment,p310_other_get,PASS,"other GET"
+M26,patient_appointment,p310_other_post,FAIL,"could not obtain authenticity_token"
+V1,payment_history,p293_own,PASS,"own view allowed"
+V1,payment_history,p294_other_get,PASS,"other view GET denied"
+V1,payment_history,p294_other_post,FAIL,"could not obtain authenticity_token"
+M21,payment_history,p293_own,PASS,"own view allowed"
+M21,payment_history,p294_other_get,PASS,"other view GET denied"
+M21,payment_history,p294_other_post,FAIL,"could not obtain authenticity_token"
+M27,payment_history,p293_own,PASS,"own view allowed"
+M27,payment_history,p294_other_get,PASS,"other view GET denied"
+M27,payment_history,p294_other_post,FAIL,"could not obtain authenticity_token"
+V1,admit_history,p301_get,PASS,"own view allowed"
+V1,admit_history,p301_post,FAIL,"own view denied unexpectedly"
+V1,admit_history,p302_get,PASS,"other view correctly denied"
+V1,admit_history,p302_post,PASS,"other view correctly denied"
+M22,admit_history,p301_get,PASS,"own view allowed"
+M22,admit_history,p301_post,FAIL,"own view denied unexpectedly"
+M22,admit_history,p302_get,PASS,"other view correctly denied"
+M22,admit_history,p302_post,PASS,"other view correctly denied"
+V1,operation_history,p339_own_get,PASS,"own GET returned 200 without denial"
+V1,operation_history,p340_other_get,FAIL,"no marker and no transport denial (unexpected allow)"
+V1,operation_history,p340_other_post,FAIL,"could not obtain authenticity_token for POST"
+M23,operation_history,p339_own_get,PASS,"own GET returned 200 without denial"
+M23,operation_history,p340_other_get,FAIL,"no marker and no transport denial (unexpected allow)"
+M23,operation_history,p340_other_post,FAIL,"could not obtain authenticity_token for POST"
+V1,invoice_list,own_get,PASS,"allowed as expected"
+V1,invoice_list,own_post,PASS,"allowed as expected"
+V1,invoice_list,other_get,PASS,"denied (no marker, no redirect)"
+V1,invoice_list,other_post,PASS,"denied (no marker, no redirect)"
+M24,invoice_list,own_get,PASS,"allowed as expected"
+M24,invoice_list,own_post,PASS,"allowed as expected"
+M24,invoice_list,other_get,PASS,"denied (no marker, no redirect)"
+M24,invoice_list,other_post,FAIL,"marker found, data leaked"
+V1,appointment_doctor_isr,p158_get,FAIL,"own resource unexpected status 404 or transport denial"
+V1,appointment_doctor_isr,p158_post,FAIL,"could not obtain authenticity_token"
+V1,appointment_doctor_isr,p159_get,FAIL,"marker absent, transport allowed"
+V1,appointment_doctor_isr,p159_post,FAIL,"could not obtain authenticity_token"
+M28,appointment_doctor_isr,p158_get,FAIL,"own resource unexpected status 404 or transport denial"
+M28,appointment_doctor_isr,p158_post,FAIL,"could not obtain authenticity_token"
+M28,appointment_doctor_isr,p159_get,FAIL,"marker absent, transport allowed"
+M28,appointment_doctor_isr,p159_post,FAIL,"could not obtain authenticity_token"
+V1,manage_profile_isr,own_get,FAIL,"own GET denied"
+V1,manage_profile_isr,own_post,FAIL,"own POST: no token"
+V1,manage_profile_isr,other_get,FAIL,"other GET not denied"
+V1,manage_profile_isr,other_post,FAIL,"other POST: no token"
+M29,manage_profile_isr,login,ERROR,"login failed - patient3 account was corrupted by this script's own prior V1 run (GET to destructive endpoint wiped profile fields)"

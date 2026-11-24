@@ -1,0 +1,13 @@
+id,operator,description
+M01,B1,"delete the session guard of doctor/manage_appointment"
+M02,B1,"delete the session guard of patient/view_prescription"
+M03,B1,"delete the session guard of admin/manage_doctor"
+M04,B1,"delete the session guard of patient/view_invoice"
+M05,B2,"delete the ownership check of appointment view/edit form"
+M06,B2,"delete the ownership check of appointment update"
+M07,B2,"delete the ownership check of appointment delete"
+M08,B2,"delete the ownership filter of prescription edit"
+M09,B3,"replace the role flag admin_login by doctor_login in admin/manage_doctor"
+M10,B3,"replace the role flag patient_login by doctor_login in patient/view_prescription"
+M11,B4,"appointment update check reads the identifier from the wrong URL segment"
+M12,B4,"appointment delete check reads the identifier from the wrong URL segment"

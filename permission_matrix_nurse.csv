@@ -1,0 +1,64 @@
+policy_ref,role,operation,resource,ownership,endpoint,decision
+P003,nurse,backup and restore,database,none,admin/backup_restore,deny
+P010,nurse,view,dashboard,none,admin/dashboard,deny
+P017,nurse,manage accountants,accountant account,none,admin/manage_accountant,deny
+P024,nurse,manage,department,none,admin/manage_department,deny
+P031,nurse,manage doctors,doctor account,none,admin/manage_doctor,deny
+P038,nurse,manage,email template,none,admin/manage_email_template,deny
+P045,nurse,manage laboratorists,laboratorist account,none,admin/manage_laboratorist,deny
+P052,nurse,manage,language,none,admin/manage_language,deny
+P059,nurse,manage,noticeboard,none,admin/manage_noticeboard,deny
+P066,nurse,manage nurses,nurse account,none,admin/manage_nurse,deny
+P073,nurse,manage patients,patient account,none,admin/manage_patient,deny
+P080,nurse,manage pharmacists,pharmacist account,none,admin/manage_pharmacist,deny
+P088,nurse,manage,profile,other,admin/manage_profile,deny
+P095,nurse,manage,system settings,none,admin/system_settings,deny
+P102,nurse,view,appointment,none,admin/view_appointment,deny
+P109,nurse,view,bed status,none,admin/view_bed_status,deny
+P116,nurse,view,blood bank,none,admin/view_blood_bank,deny
+P123,nurse,view,medicine,none,admin/view_medicine,deny
+P130,nurse,view,payment,none,admin/view_payment,deny
+P137,nurse,view,report,none,admin/view_report,deny
+P144,nurse,view,dashboard,none,doctor/dashboard,deny
+P152,nurse,view,appointment,other,doctor/manage_appointment,deny
+P160,nurse,edit,appointment,other,doctor/manage_appointment,deny
+P168,nurse,delete,appointment,other,doctor/manage_appointment,deny
+P175,nurse,manage,bed allotment,none,doctor/manage_bed_allotment,deny
+P182,nurse,manage,patient record,none,doctor/manage_patient,deny
+P190,nurse,manage,prescription,other,doctor/manage_prescription,deny
+P198,nurse,manage,profile,other,doctor/manage_profile,deny
+P206,nurse,manage,report,other,doctor/manage_report,deny
+P213,nurse,view,blood bank,none,doctor/view_blood_bank,deny
+P220,nurse,view,dashboard,none,nurse/dashboard,allow
+P227,nurse,manage,bed,none,nurse/manage_bed,allow
+P234,nurse,manage,bed allotment,none,nurse/manage_bed_allotment,allow
+P241,nurse,manage,blood bank,none,nurse/manage_blood_bank,allow
+P248,nurse,manage,blood donor,none,nurse/manage_blood_donor,allow
+P255,nurse,manage,patient record,none,nurse/manage_patient,allow
+P262,nurse,manage,profile,own,nurse/manage_profile,allow
+P263,nurse,manage,profile,other,nurse/manage_profile,deny
+P270,nurse,manage,report,none,nurse/manage_report,allow
+P277,nurse,view,dashboard,none,patient/dashboard,deny
+P284,nurse,manage,profile,other,patient/manage_profile,deny
+P292,nurse,view,payment history,other,patient/payment_history,deny
+P300,nurse,view,admit history,other,patient/view_admit_history,deny
+P308,nurse,view,appointment,other,patient/view_appointment,deny
+P316,nurse,view,blood bank,none,patient/view_blood_bank,deny
+P323,nurse,view,doctor,none,patient/view_doctor,deny
+P330,nurse,view,invoice,other,patient/view_invoice,deny
+P338,nurse,view,operation history,other,patient/view_operation_history,deny
+P346,nurse,view,prescription,other,patient/view_prescription,deny
+P354,nurse,view,dashboard,none,pharmacist/dashboard,deny
+P361,nurse,manage,medicine,none,pharmacist/manage_medicine,deny
+P368,nurse,manage,medicine category,none,pharmacist/manage_medicine_category,deny
+P375,nurse,manage,prescription,none,pharmacist/manage_prescription,deny
+P382,nurse,manage,profile,other,pharmacist/manage_profile,deny
+P390,nurse,view,dashboard,none,laboratorist/dashboard,deny
+P397,nurse,manage,blood bank,none,laboratorist/manage_blood_bank,deny
+P404,nurse,manage,blood donor,none,laboratorist/manage_blood_donor,deny
+P411,nurse,manage,prescription,none,laboratorist/manage_prescription,deny
+P418,nurse,manage,profile,other,laboratorist/manage_profile,deny
+P426,nurse,view,dashboard,none,accountant/dashboard,deny
+P433,nurse,manage,invoice,none,accountant/manage_invoice,deny
+P440,nurse,manage,profile,other,accountant/manage_profile,deny
+P448,nurse,view,payment,none,accountant/view_payment,deny

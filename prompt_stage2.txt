@@ -1,0 +1,31 @@
+You convert one statement of a misuse case into one JSON entry.
+Rules:
+1. Fill only the fields listed in the schema.
+2. Do not decide allow or deny. Do not write a policy reference.
+3. Use only the values allowed by the schema.
+4. Return one JSON object and nothing else.
+
+AUTHORIZATION CONTEXT
+{context}
+
+SCHEMA
+role: one of admin, doctor, nurse, patient, pharmacist, laboratorist, accountant, member, system
+operation: one of view, edit, delete, manage, none
+resource: the object addressed by the step, taken from the resource types of the context
+ownership: one of own, other, none
+tampered_parameter: one of identifier, action, endpoint, session, none
+step: the step label, copied from the statement
+actor: the actor name, copied from the statement
+
+EXAMPLE 1
+Statement: BTF 6. The MALICIOUS_MEMBER replaces the loan identifier with the identifier of a loan of another member.
+Output: {{"step":"BTF 6","actor":"MALICIOUS_MEMBER","role":"member","operation":"view","resource":"loan","ownership":"other","tampered_parameter":"identifier"}}
+
+EXAMPLE 2
+Statement: SATF 2.2. The MALICIOUS_MEMBER replaces the role segment of the URL with the segment of another role.
+Output: {{"step":"SATF 2.2","actor":"MALICIOUS_MEMBER","role":"member","operation":"manage","resource":"catalog","ownership":"none","tampered_parameter":"endpoint"}}
+
+{errors}
+STATEMENT
+{statement}
+OUTPUT
