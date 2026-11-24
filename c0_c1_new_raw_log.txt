@@ -1,0 +1,485 @@
+
+
+=== Run started 2026-11-21T00:50:06.899560 ===
+
+### c0 nurse_bed -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_nurse_bed.py
+PASS: admin access to nurse/manage_bed correctly denied
+(exit code 0)
+
+### c0 nurse_bed -- variant M13 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M13
+live HMS is now M13
+(exit code 0)
+$ python c0_nurse_bed.py
+FAIL: admin access to nurse/manage_bed ALLOW, expected DENY – request was not denied by transport
+(exit code 0)
+
+### c1 nurse_bed -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_nurse_bed.py
+GET /nurse/manage_bed: PASS
+ERROR: authenticity_token not found at http://localhost/hms/index.php?/nurse/manage_bed
+(exit code 1)
+
+### c1 nurse_bed -- variant M13 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M13
+live HMS is now M13
+(exit code 0)
+$ python c1_nurse_bed.py
+GET /nurse/manage_bed: FAIL (expected denied=True, got denied=False)
+ERROR: authenticity_token not found at http://localhost/hms/index.php?/nurse/manage_bed
+(exit code 1)
+
+### c0 admin_patient -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_admin_patient.py
+PASS
+(exit code 0)
+
+### c0 admin_patient -- variant M14 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M14
+live HMS is now M14
+(exit code 0)
+$ python c0_admin_patient.py
+FAIL - allowed when it should be denied
+(exit code 0)
+
+### c1 admin_patient -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_admin_patient.py
+GET unauthenticated: PASS - request denied as expected
+POST unauthenticated: FAIL - request was allowed
+(exit code 0)
+
+### c1 admin_patient -- variant M14 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M14
+live HMS is now M14
+(exit code 0)
+$ python c1_admin_patient.py
+GET unauthenticated: FAIL - request was allowed
+POST unauthenticated: FAIL - request was allowed
+(exit code 0)
+
+### c0 pharmacist_medicine -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_pharmacist_medicine.py
+PASS: access allowed as expected
+(exit code 0)
+
+### c0 pharmacist_medicine -- variant M16 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M16
+live HMS is now M16
+(exit code 0)
+$ python c0_pharmacist_medicine.py
+FAIL: access was denied (transport redirect) but expected ALLOW
+(exit code 0)
+
+### c1 pharmacist_medicine -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_pharmacist_medicine.py
+GET pharmacist/manage_medicine : PASS - GET allowed
+POST pharmacist/manage_medicine : PASS - POST allowed
+(exit code 0)
+
+### c1 pharmacist_medicine -- variant M16 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M16
+live HMS is now M16
+(exit code 0)
+$ python c1_pharmacist_medicine.py
+GET pharmacist/manage_medicine : FAIL - GET was denied (redirect/Refresh detected)
+POST pharmacist/manage_medicine : FAIL - Failed to obtain token for POST: authenticity_token not found
+(exit code 0)
+
+### c0 accountant_invoice -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_accountant_invoice.py
+PASS
+(exit code 0)
+
+### c0 accountant_invoice -- variant M17 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M17
+live HMS is now M17
+(exit code 0)
+$ python c0_accountant_invoice.py
+FAIL - allowed when denial expected
+(exit code 0)
+
+### c1 accountant_invoice -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_accountant_invoice.py
+GET: PASS
+POST: FAIL - authenticity_token not found
+(exit code 0)
+
+### c1 accountant_invoice -- variant M17 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M17
+live HMS is now M17
+(exit code 0)
+$ python c1_accountant_invoice.py
+GET: FAIL - no transport denial
+POST: FAIL - authenticity_token not found
+(exit code 0)
+
+### c0 appointment_list -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_appointment_list.py
+PASS: access correctly denied
+(exit code 0)
+
+### c0 appointment_list -- variant M19 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M19
+live HMS is now M19
+(exit code 0)
+$ python c0_appointment_list.py
+FAIL: victim data was exposed (marker found)
+(exit code 0)
+
+### c1 appointment_list -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_appointment_list.py
+FAIL: GET request denied incorrectly – unexpected allow
+FAIL: POST request denied incorrectly – unexpected allow
+(exit code 0)
+
+### c1 appointment_list -- variant M19 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M19
+live HMS is now M19
+(exit code 0)
+$ python c1_appointment_list.py
+FAIL: GET request denied incorrectly – other data rendered (marker found); unexpected allow
+FAIL: POST request denied incorrectly – other data rendered (marker found); unexpected allow
+(exit code 0)
+
+### c0 patient_appointment -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_patient_appointment.py
+GET attempt: PASS - access denied as expected
+FAIL - could not find authenticity_token on view_appointment page
+(exit code 0)
+
+### c0 patient_appointment -- variant M20 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M20
+live HMS is now M20
+(exit code 0)
+$ python c0_patient_appointment.py
+GET attempt: FAIL - victim marker was present
+FAIL - could not find authenticity_token on view_appointment page
+(exit code 0)
+
+### c0 patient_appointment -- variant M26 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M26
+live HMS is now M26
+(exit code 0)
+$ python c0_patient_appointment.py
+GET attempt: PASS - access denied as expected
+FAIL - could not find authenticity_token on view_appointment page
+(exit code 0)
+
+### c1 patient_appointment -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_patient_appointment.py
+PASS P309 own GET
+PASS P310 other GET
+FAIL P310 other POST: could not obtain authenticity_token
+(exit code 0)
+
+### c1 patient_appointment -- variant M20 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M20
+live HMS is now M20
+(exit code 0)
+$ python c1_patient_appointment.py
+PASS P309 own GET
+PASS P310 other GET
+FAIL P310 other POST: could not obtain authenticity_token
+(exit code 0)
+
+### c1 patient_appointment -- variant M26 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M26
+live HMS is now M26
+(exit code 0)
+$ python c1_patient_appointment.py
+PASS P309 own GET
+PASS P310 other GET
+FAIL P310 other POST: could not obtain authenticity_token
+(exit code 0)
+
+### c0 payment_history -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_payment_history.py
+Login successful
+GET attempt: PASS - access denied as expected
+POST attempt: PASS - access denied as expected
+(exit code 0)
+
+### c0 payment_history -- variant M21 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M21
+live HMS is now M21
+(exit code 0)
+$ python c0_payment_history.py
+Login successful
+GET attempt: FAIL - marker found, access was allowed
+POST attempt: PASS - access denied as expected
+(exit code 0)
+
+### c0 payment_history -- variant M27 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M27
+live HMS is now M27
+(exit code 0)
+$ python c0_payment_history.py
+Login successful
+GET attempt: PASS - access denied as expected
+POST attempt: PASS - access denied as expected
+(exit code 0)
+
+### c1 payment_history -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_payment_history.py
+PASS P293 own view allowed
+PASS P294 other view GET denied
+FAIL P294 POST: could not obtain authenticity_token
+(exit code 1)
+
+### c1 payment_history -- variant M21 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M21
+live HMS is now M21
+(exit code 0)
+$ python c1_payment_history.py
+PASS P293 own view allowed
+PASS P294 other view GET denied
+FAIL P294 POST: could not obtain authenticity_token
+(exit code 1)
+
+### c1 payment_history -- variant M27 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M27
+live HMS is now M27
+(exit code 0)
+$ python c1_payment_history.py
+PASS P293 own view allowed
+PASS P294 other view GET denied
+FAIL P294 POST: could not obtain authenticity_token
+(exit code 1)
+
+### c0 admit_history -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_admit_history.py
+FAIL: allow (victim data leaked)
+(exit code 0)
+
+### c0 admit_history -- variant M22 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M22
+live HMS is now M22
+(exit code 0)
+$ python c0_admit_history.py
+FAIL: allow (victim data leaked)
+(exit code 0)
+
+### c1 admit_history -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_admit_history.py
+P301 GET PASS: own view allowed
+P301 POST FAIL: own view denied unexpectedly
+P302 GET PASS: other view correctly denied
+P302 POST PASS: other view correctly denied
+(exit code 0)
+
+### c1 admit_history -- variant M22 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M22
+live HMS is now M22
+(exit code 0)
+$ python c1_admit_history.py
+P301 GET PASS: own view allowed
+P301 POST FAIL: own view denied unexpectedly
+P302 GET PASS: other view correctly denied
+P302 POST PASS: other view correctly denied
+(exit code 0)
+
+### c0 operation_history -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_operation_history.py
+PASS: Access denied as expected
+(exit code 0)
+
+### c0 operation_history -- variant M23 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M23
+live HMS is now M23
+(exit code 0)
+$ python c0_operation_history.py
+PASS: Access denied as expected
+(exit code 0)
+
+### c1 operation_history -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_operation_history.py
+PASS P339 own GET: own GET returned 200 without denial
+FAIL P340 other GET: no marker and no transport denial (unexpected allow)
+FAIL P340 other POST: could not obtain authenticity_token for POST
+(exit code 0)
+
+### c1 operation_history -- variant M23 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M23
+live HMS is now M23
+(exit code 0)
+$ python c1_operation_history.py
+PASS P339 own GET: own GET returned 200 without denial
+FAIL P340 other GET: no marker and no transport denial (unexpected allow)
+FAIL P340 other POST: could not obtain authenticity_token for POST
+(exit code 0)
+
+### c0 invoice_list -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_invoice_list.py
+PASS: Access correctly denied
+(exit code 0)
+
+### c0 invoice_list -- variant M24 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M24
+live HMS is now M24
+(exit code 0)
+$ python c0_invoice_list.py
+FAIL: Access was allowed (marker found)
+(exit code 0)
+
+### c1 invoice_list -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_invoice_list.py
+PASS own GET: allowed as expected
+PASS own POST: allowed as expected
+PASS other GET: denied (no marker, no redirect)
+PASS other POST: denied (no marker, no redirect)
+(exit code 0)
+
+### c1 invoice_list -- variant M24 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M24
+live HMS is now M24
+(exit code 0)
+$ python c1_invoice_list.py
+PASS own GET: allowed as expected
+PASS own POST: allowed as expected
+PASS other GET: denied (no marker, no redirect)
+FAIL other POST: marker found, data leaked
+(exit code 0)
+
+### c0 appointment_doctor_isr -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_appointment_doctor_isr.py
+PASS: access denied as expected
+(exit code 0)
+
+### c0 appointment_doctor_isr -- variant M28 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M28
+live HMS is now M28
+(exit code 0)
+$ python c0_appointment_doctor_isr.py
+PASS: access denied as expected
+(exit code 0)
+
+### c1 appointment_doctor_isr -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_appointment_doctor_isr.py
+P158 GET id=32: FAIL - own resource unexpected status 404 or transport denial
+P158 POST id=32: FAIL - could not obtain authenticity_token
+P159 GET id=35: FAIL - marker absent, transport allowed
+P159 POST id=35: FAIL - could not obtain authenticity_token
+(exit code 0)
+
+### c1 appointment_doctor_isr -- variant M28 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M28
+live HMS is now M28
+(exit code 0)
+$ python c1_appointment_doctor_isr.py
+P158 GET id=32: FAIL - own resource unexpected status 404 or transport denial
+P158 POST id=32: FAIL - could not obtain authenticity_token
+P159 GET id=35: FAIL - marker absent, transport allowed
+P159 POST id=35: FAIL - could not obtain authenticity_token
+(exit code 0)
+
+### c0 manage_profile_isr -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c0_manage_profile_isr.py
+--- stderr ---
+  File "D:\ijacsa_experiment\hms_experiment\c0_manage_profile_isr.py", line 111
+    ```
+    ^
+SyntaxError: invalid syntax
+(exit code 1)
+
+### c0 manage_profile_isr -- variant M29 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M29
+live HMS is now M29
+(exit code 0)
+$ python c0_manage_profile_isr.py
+--- stderr ---
+  File "D:\ijacsa_experiment\hms_experiment\c0_manage_profile_isr.py", line 111
+    ```
+    ^
+SyntaxError: invalid syntax
+(exit code 1)
+
+### c1 manage_profile_isr -- variant V1 (expect PASS / no violation) ###
+$ python switch_variant.py D:\wamp64\www\hms variants V1
+live HMS is now V1
+(exit code 0)
+$ python c1_manage_profile_isr.py
+FAIL - own GET: own GET denied
+FAIL - own POST: own POST: no token
+FAIL - other GET: other GET not denied
+FAIL - other POST: other POST: no token
+(exit code 0)
+
+### c1 manage_profile_isr -- variant M29 (expect FAIL / violation found) ###
+$ python switch_variant.py D:\wamp64\www\hms variants M29
+live HMS is now M29
+(exit code 0)
+$ python c1_manage_profile_isr.py
+FAIL login: login failed
+(exit code 1)
+
+=== Run finished 2026-11-21T00:51:03.791890 ===

@@ -1,0 +1,19 @@
+role,id,name,email,password,use
+admin,1,Admin,admin@admin.com,admin123,admin baseline
+doctor,4,Yasir,Rizwan@yahoo.com,rizwan123,attacker for appointment instance (own appointment 15)
+doctor,6,sohaib,drsohaib@yahoo.com,sohaib123,victim doctor (appointments 4 13 14 16)
+doctor,7,Rizwan,yasir@yahoo.com,yasir123,spare
+patient,3,Bilal,bilal@gmail.com,bilal123,attacker for prescription and invoice instances (own prescription 3 and invoice 3)
+patient,8,Asif,asif@yahoo.com,asif123,victim patient (prescription 5 and invoice 4)
+patient,7,moain,moian@yahoo.com,moian123,spare
+patient,9,Zeeshan,zeeshan@yahoo.com,zeeshan123,spare
+patient,10,Ahmed,ahmed@yahoo.com,ahmed123,spare
+patient,11,Ahsan,ahsan@yahoo.com,ahsan123,spare
+nurse,1,Fatima,fatima@yahoo.com,fatima123,role check
+nurse,2,Abida,abida@yahoo.com,abida123,spare
+pharmacist,1,Hassan,hassan@yahoo.com,hassan123,role check
+pharmacist,2,Junaid,junaid@yahoo.com,junaid123,spare
+laboratorist,1,Khalid,khalid@yahoo.com,khalid123,role check
+laboratorist,2,Hamid,hamid@yahoo.com,hamid123,spare
+accountant,1,accountant,accountant@accountant.com,accountant,role check
+accountant,2,accountant2,accountant2@accountant.com,accountant2,spare
